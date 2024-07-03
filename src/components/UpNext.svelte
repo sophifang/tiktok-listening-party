@@ -33,7 +33,7 @@
     <!-- Up Next Table -->
     <table>
         <tr>
-            <th>Up Next</th>
+            <th>Up Next <div class="numSongs">(5 of {n} songs)</div></th>
         </tr>
 
         <!-- Songs -->
@@ -128,5 +128,11 @@
         justify-content: right;
         align-items: center;
         white-space: pre;
+    }
+
+    .numSongs{
+        display:inline; 
+        font-size: 15px; 
+        color: #BFBFBF
     }
 </style>
