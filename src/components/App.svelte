@@ -28,7 +28,13 @@
   };  
 
   async function boosted(){
-    playlist[Math.floor(Math.random() * 6)][3] += 1
+    playlist[Math.floor(Math.random() * 6)][3] += 1;
+  };
+
+  async function reset(){
+    for(let i=0; i < playlist.length; i++){
+      playlist[i][3] = 0;
+    }
   };
 
 </script>
@@ -36,7 +42,8 @@
 <main>
   <div class="boost-playlist">
     <div class="button-wrapper">
-      <button on:click={boosted}>Boost Random Song</button>
+      <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button>
+      <button on:click={reset}>Reset</button>
     </div>
     <Playlist {playlist} {cooldowns} {song} {boost}/>  
   </div>
