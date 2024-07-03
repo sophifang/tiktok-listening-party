@@ -59,14 +59,14 @@
   {#if page === 0}
       <div class = "song">
           <h1>So Long, London</h1>
-          <img src="album.png" width="200" /> <br>
+          <img src="ttpd.png" width="200" /> <br>
           <button on:click={next}>Stopped trying to drill the safe <br> Thinkin, how much sad did you think I had<br>Did you think I had in me?</button>
       </div>
   {/if}
 
   {#if page === 1}
       <div class = "lyrics">
-            <img src="album.png" width="100"/>
+            <img src="ttpd.png" width="100"/>
             <button on:click={back}><img src="left-arrow.png" width="10" /></button>
             <p>So Long, London <br> The Tortured Poets Department</p>
             <p>I saw in my mind fairy lights <br>
