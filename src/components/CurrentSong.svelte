@@ -1,5 +1,6 @@
 <script>
-    export let playlist, cooldowns, song;
+    import AudioPlayer from "./AudioPlayer.svelte";
+    export let song;
 </script>
 
 <main>
@@ -10,7 +11,8 @@
             <span style="font-weight: 600">{song[0]}</span>
             <br/>
             <span style="font-size:10px; font-weight:400; color:#F6F3F7">{song[1]}</span>
-            <img style="margin-top:8px" src="song_length.png"/>
+             <br/>
+            <AudioPlayer/>
         </div>
     </section>
 </main>
