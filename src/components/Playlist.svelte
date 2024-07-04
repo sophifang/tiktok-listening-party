@@ -2,14 +2,14 @@
     import CurrentSong from './CurrentSong.svelte';
     import UpNext from './UpNext.svelte';
     import PlayedRecently from './PlayedRecently.svelte';
-    export let playlist, cooldowns, song, boost;
+    export let playlist, cooldowns, song;
   </script>
   
 <main>
     <div class='phone'>
         <div class='playlist'>
-            <div class='song'> <CurrentSong {playlist} {cooldowns} {song}/> </div>
-            <div class='upNext'> <UpNext {playlist} {boost}/> </div>
+            <div class='song'> <CurrentSong {song}/> </div>
+            <div class='upNext'> <UpNext {playlist}/> </div>
             <div class='playedRecently'> <PlayedRecently {cooldowns}/> </div>       
         </div>
     </div>

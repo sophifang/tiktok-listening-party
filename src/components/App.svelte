@@ -17,16 +17,6 @@
     ["Welcome to New York", "1989 (Taylor’s Version)", "1989.png", 15]
   ];  
 
-  let boost = {
-    "Fortnight": 1,
-    "Cruel Summer": 1,
-    "Shake It Off": 1,
-    "Paper Rings": 1,
-    "Blank Space": 1,
-    "Down Bad": 1,
-    "Lover": 1,
-  };  
-
   async function boosted(){
     playlist[Math.floor(Math.random() * 6)][3] += 1;
   };
@@ -53,7 +43,7 @@
       <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button>
       <button on:click={reset}>Reset</button>
     </div>
-    <Playlist {playlist} {cooldowns} {song} {boost}/>  
+    <Playlist {playlist} {cooldowns} {song}/>  
   </div>
 
   {#if page === 0}

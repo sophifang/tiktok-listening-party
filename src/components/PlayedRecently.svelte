@@ -1,6 +1,5 @@
 <script>
     import PlayedRecentlyBox from './PlayedRecentlyBox.svelte';
-    import { flip } from 'svelte/animate';
 
     export let cooldowns;
     let updateCooldown = 60_000;

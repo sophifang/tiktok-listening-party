@@ -2,7 +2,7 @@
     import UpNextBox from './UpNextBox.svelte';
     import { flip } from 'svelte/animate';
 
-    export let playlist, boost;
+    export let playlist;
     let pos = {};
     let updateCooldown = 500;
     let greenArrow = "green-arrow.png";
@@ -33,7 +33,7 @@
     <!-- Up Next Table -->
     <table>
         <tr>
-            <th>Up Next <div class="numSongs">(5 of {n} songs)</div></th>
+            <th>Up Next <div class="numSongs">({playlist.length > 5 ? 5 : playlist.length} of {n} songs)</div></th>
         </tr>
 
         <!-- Songs -->
@@ -47,7 +47,6 @@
                 <span slot="boost">
                     {#if pos[row[0]] > currPos}
                         <div id="image" class='centerBoost'>
-                            <!-- +{boost[row[0]]} -->
                             <img src={greenArrow}/>
                         </div>
                     {:else if pos[row[0]] < currPos}
