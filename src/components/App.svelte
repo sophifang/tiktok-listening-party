@@ -1,6 +1,8 @@
 <script>
   import Playlist from './Playlist.svelte';
   import ListeningParty from './ListeningParty.svelte';
+  import Boosting from './Boosting.svelte';
+
 
   let song = ["So Long, London", "The Tortured Poets Department", "ttpd.png", 262000]
   let playlist = [
@@ -31,11 +33,17 @@
 
 <main>
   <div class="boost-playlist">
+    
+     <div class = "boost-listening">
+      <Boosting/> 
+     </div>
+
+    <Playlist {playlist} {cooldowns} {song}/>  
+
     <div class="button-wrapper">
       <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button>
       <button on:click={reset}>Reset</button>
     </div>
-    <Playlist {playlist} {cooldowns} {song}/>  
   </div>
 
   <ListeningParty />
@@ -45,6 +53,12 @@
   .boost-playlist{
     display: grid;
 		grid-template-columns: 1fr 1fr;
+  }
+  
+  .boost-listening{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .button-wrapper{
