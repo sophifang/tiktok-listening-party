@@ -10,7 +10,7 @@
         <div class='playlist'>
             <div class='song'> <CurrentSong {song}/> </div>
             <div class='upNext'> <UpNext {playlist}/> </div>
-            <div class='playedRecently'> <PlayedRecently {cooldowns}/> </div>       
+            <div class='playedRecently'> <PlayedRecently {playlist} {cooldowns}/> </div>       
         </div>
     </div>
 </main>

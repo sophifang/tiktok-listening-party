@@ -1,34 +1,40 @@
 <script>
     import PlayedRecentlyBox from './PlayedRecentlyBox.svelte';
 
-    export let cooldowns;
-    let updateCooldown = 60_000;
+    export let playlist, cooldowns;
     let n = cooldowns.length;  
+    let updateCooldown = 60_000;
 
-    function updateQueue(){  
-        let i;
-        for (i = 0; i < n; i++){
-            cooldowns[i][3] = cooldowns[i][3] - 1;
-            console.log(cooldowns[i][3])
-            if (cooldowns[i][3] < 1){
-               cooldowns.shift();
-               n = n - 1;
-               if (n <= 0){
-                    break;
-               }
-            }
-        }
-    }  
-    $: if(n > 0){
-        setInterval(updateQueue, updateCooldown);
-    }
+    // // Update Cooldowns
+    // function updateQueue(){  
+    //     let i;
+    //     for (i = 0; i < n; i++){
+    //         cooldowns[i][3] = cooldowns[i][3] - 1;
+    //         if (cooldowns[i][3] < 1){
+    //            playlist.push(cooldowns.shift());
+    //            n = n - 1;
+    //            i--;
+    //            if (n <= 0){
+    //                 break;
+    //            }
+    //         }
+    //     }
+    // }  
+    // $: if(n > 0){
+    //     setInterval(updateQueue, updateCooldown);
+    // }
   </script>
   
 <main>
     <!-- Played Recently Table -->
     <table>
         <tr>
-            <th>Recently Played</th>
+            <th> 
+                Recently Played 
+                {#if n != 0}
+                <div class="numSongs">({cooldowns.length > 5 ? 5 : cooldowns.length} of {cooldowns.length} songs)</div>
+                {/if}
+            </th>
         </tr>
 
         <!-- Songs -->
@@ -119,19 +125,10 @@
         padding-bottom: 12px;
     }
 
-    .centerBoost{
-        color:#4EB77B;
-        font-size: 15px;
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        white-space: pre;
+    .numSongs{
+        display:inline; 
+        font-size: 15px; 
+        color: #BFBFBF
     }
+
 </style>

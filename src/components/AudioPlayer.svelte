@@ -1,6 +1,6 @@
 <script>
-	let elapsed = 123;
-	let duration = 184
+	let elapsed = 53;
+	let duration = 262;
 
     function format(time) {
 		let minutes = Math.floor(time / 60);
@@ -15,8 +15,8 @@
         <div class="progress" style="--progress: {elapsed / duration}%"></div>
     </div>  
     <div class="times" style="margin-top: 1px">
-        <span>{format(elapsed)}s</span>
-        <span style="text-align: right">{format(duration)}s</span>
+        <span>{format(elapsed)}</span>
+        <span style="text-align: right">{format(duration)}</span>
     </div>
 </main>
 
@@ -29,14 +29,14 @@
 		background: var(--bg-2);
 		border-radius: 0.5em;
 		overflow: hidden;
-        background-color: #F6F3F7;
+        background-color: #BFBFBF;
 	}
 
     .progress {
 		width: calc(100 * var(--progress));
 		height: 100%;
 		background: var(--bg-3);
-        background-color: #BFBFBF;
+        background-color: #F6F3F7;
 	}
 
     .times{
