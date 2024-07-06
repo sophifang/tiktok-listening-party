@@ -21,9 +21,9 @@
   ];  
 
   // Temporary functions for buttons
-  async function boosted(){
-    playlist[Math.floor(Math.random() * 6)][3] += 1;
-  };
+  // async function boosted(){
+  //   playlist[Math.floor(Math.random() * 6)][3] += 1;
+  // };
 
   async function reset(){
     for(let i=0; i < playlist.length; i++){
@@ -93,13 +93,13 @@
     <div class="boost-playlist">
       
       <div class = "boost-listening">
-        <Boosting /> 
+        <Boosting {playlist} /> 
       </div>
 
       <Playlist {playlist} {cooldowns} {song}/>  
 
       <div class="button-wrapper">
-        <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button>
+        <!-- <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button> -->
         <button on:click={reset}>Reset</button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 <script>
     import Modal from './BoostingModal.svelte';
+    export let playlist;
 
     let showModal = false;
     
@@ -7,13 +8,15 @@
   
 <main>
     <div class = "phone-container">
-        <img class = "listening-screen" src = "Listening Party - resized.png" alt="phone screen"/>
+        <img class = "listening-screen" src = "o_streamer_show_song.png" alt="phone screen"/>
 
         {#if showModal === true}
-             <Modal></Modal>
+             <Modal {playlist}></Modal>
              {:else}
-             <button class="boost-btn" on:click={() => (showModal = true)}> </button>
+             <!-- <button class="boost-btn" on:click={() => (showModal = true)}> </button> -->
+             <input type="image" src="waveform icon.png" class="boost-btn" alt="request icon" on:click={() => (showModal = true)}/>
         {/if}
+        
 
     </div>
 
@@ -35,28 +38,10 @@
     }
 
     .phone-container .boost-btn {
-        position: absolute;
-        top: 91.5%;
-        left: 28.5%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: transparent;
-        color: transparent;
-        border: none;
+        transform: translate(-390%, 1070%);
         cursor: pointer;
         height: 25px;
-        width: 20px;
-        border-radius: 10px;
-    }
-
-    .phone-container .boost-btn:hover {
-        background-color: #ffffff28;
-        color: white;
-    }
-
-    .phone-container .boost-btn {
-        background-color: transparent;
-        color: white;
+        width: 25px;
     }
 </style>
 
