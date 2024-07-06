@@ -10,7 +10,7 @@
         <div class='playlist'>
             <div class='song'> <CurrentSong {song}/> </div>
             <div class='upNext'> <UpNext {playlist}/> </div>
-            <div class='playedRecently'> <PlayedRecently {playlist} {cooldowns}/> </div>       
+            <div class='playedRecently'> <PlayedRecently {cooldowns}/> </div>       
         </div>
     </div>
 </main>
@@ -20,30 +20,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 12px;
+        padding-top: 8px;
     }
 
     .upNext{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 12px;
+        padding-top: 8px;
     }
 
     .playedRecently{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 12px;
+        padding-top: 8px;
     }
 
     .playlist{
-        scale: 0.7;
-        width: 430px;
-        background: rgb(100,99,97);
-        background: linear-gradient(-184deg, rgba(100,99,97,1) 0%, rgba(58,58,55,1) 21%);
+        background: rgb(190,84,100);
+        background: linear-gradient(-187deg, #CD5063 0%, #532E5A 21%);
         border-radius: 12px;
-
+        width: 301px;
+        height: 608px;
     }
 
     .phone{

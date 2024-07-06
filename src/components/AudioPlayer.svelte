@@ -16,15 +16,15 @@
     </div>  
     <div class="times" style="margin-top: 1px">
         <span>{format(elapsed)}</span>
-        <span style="text-align: right">{format(duration)}</span>
+        <span style="text-align: right; margin-right: 2px">{format(duration)}</span>
     </div>
 </main>
 
 <style>
     .slider {
-        margin-top: 8px;
+        margin-top: 3px;
 		flex: 1;
-        width: 310px;
+        width: 215px;
 		height: 0.3em;
 		background: var(--bg-2);
 		border-radius: 0.5em;
@@ -40,7 +40,7 @@
 	}
 
     .times{
-        font-size: 10px;
+        font-size: 7px;
         color: #F6F3F7;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;

@@ -5,12 +5,12 @@
 
 <main>
     <section>
-        <img style="scale: 1.2; margin-left: 7px" src="ttpd.png"/>
-        <div>
+        <img src={song[2]} width="48px" height="48px"/>
+        <div class="info">
             Now Playing:  
             <span style="font-weight: 600">{song[0]}</span>
             <br/>
-            <span style="font-size:10px; font-weight:400; color:#F6F3F7">{song[1]}</span>
+            <span style="font-size:8px; font-weight:400; color:#F6F3F7">{song[1]}</span>
              <br/>
             <AudioPlayer/>
         </div>
@@ -19,7 +19,7 @@
 
 <style>
     section{
-        font-size: 15px;
+        font-size: 10px;
         color: #F6F3F7;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -27,19 +27,15 @@
         font-style: normal;
         font-variation-settings: "slnt" 0;
 
-		width: 384px;
-        height: 78px;
+		width: 270px;
+        height: 50px;
 		display: grid;
 		grid-template-columns: 1fr 4fr;
-        margin-top: 12px;
+        margin-top: 8px;
 	}
 
-    .center {
-		text-align: left;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-	}
-
+    .info{
+        margin: auto;
+    }
 
 </style>

@@ -4,25 +4,28 @@
   import Boosting from './Boosting.svelte';
 
 
-  let song = ["So Long, London", "The Tortured Poets Department", "ttpd.png", 262000]
+  let song = ["Endless Sun", "Sundial", "album_cover/endless_sun.png", 0]
   let playlist = [
-    ["Fortnight", "The Tortured Poets Department", "ttpd.png", 0, 31],
-    ["Cruel Summer", "Lover", "lover.png", 0, 128], 
-    ["Shake It Off", "1989 (Taylor’s Version)", "1989.png", 0, 75],
-    ["Paper Rings", "Lover", "lover.png", 0, 48], 
-    ["Blank Space", "1989 (Taylor’s Version)", "1989.png", 0, 45],
-    ["Down Bad", "The Tortured Poets Department", "ttpd.png", 0, 61],
-    ["Lover", "Lover", "lover.png", 0, 189]
+    ["The Place We Used To Go", "Dreamland", "album_cover/the_place_we_used_to_go.png", 0],
+    ["Rise Again", "Sundial", "album_cover/rise_again.png", 0], 
+    ["Dancing Through the Tears", "Last Dance", "album_cover/dancing_through_the_tears.png", 0],
+    ["Moonlight Whispers", "Single", "album_cover/moonlight_whispers.png", 0], 
+    ["Heart in Your Hands", "Neon Lights in the City", "album_cover/heart_in_your_hands.png", 0],
+    ["Votes for Her", "Single", "album_cover/votes_for_her.png", 0],
+    ["Street Symphony", "Neon Lights in the City", "album_cover/street_symphony.png", 0],
+    ["Last Dance", "Last Dance", "album_cover/last_dance.png", 0],
+    ["Too Many Hours", "Single", "album_cover/too_many_hours.png", 0]
   ];  
+  
 
   let cooldowns = [
-    ["Fortnight(feat. Post Malone)", "The Tortured Poets Department", "ttpd.png", 6],
-    ["Welcome to New York", "1989 (Taylor’s Version)", "1989.png", 15]
+    ["Dreamers", "Dreamland", "album_cover/dreamers.png", 6],
+    ["Heart Beats Faster", "Color Pop", "album_cover/heart_beats_faster.png", 15]
   ];  
 
   // Temporary functions for buttons
   async function boosted(){
-    playlist[Math.floor(Math.random() * 6)][3] += 1;
+    playlist[Math.floor(Math.random() * playlist.length)][3] += 1;
   };
 
   async function reset(){
@@ -33,20 +36,36 @@
 </script>
 
 <main>
+  <!-- Navigation Bar -->
   <nav>
-    <ul>
-      <h1 class="menu-heading">
-        TheJams
-      </h1>
-      <li>
-        <a href="https://github.com/sophifang/tiktok-listening-party" target="_blank"><img src="github-mark.png" href="https://github.com/sophifang/tiktok-listening-party" width="40px"/></a>
-      </li>
-      <li>
-        <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=444-2386&t=dZ8PawirI0kKnMej-0&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=444%3A2386&show-proto-sidebar=1" target="_blank"><img src="Figma-logo.png" width="70px"/></a>
-      </li>
-    </ul>
+    <div class="container">
+      <ul>
+        <h1 class="menu-heading">
+          TheJams
+        </h1>
+        <li style="padding: 1vw;">
+          <a href="https://github.com/sophifang/tiktok-listening-party" target="_blank">
+            <img 
+              src="github-mark.png" 
+              alt="GitHub Repo" 
+              title="GitHub Repo" 
+              width="35px"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=444-2386&t=dZ8PawirI0kKnMej-0&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=444%3A2386&show-proto-sidebar=1" target="_blank">
+            <img 
+              src="Figma-logo.png" 
+              alt="Figma" 
+              title="Figma Demo"
+              width="32px"/>
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
-
+  <!-- Article -->
   <div class="page">
     <h1>
       Introducing TikTok’s newest listening party feature building artist/fan communities and enhancing music discovery
@@ -57,10 +76,9 @@
       <div class="date">
         Jul 1, 2024
       </div>
-      <br/>
     </div>
     
-    <img src="temp-img.png"/>
+    <img class="promo" src="temp-img.png" alt="Promo"/>
 
     <p class="article">
       Last year, so and so artist something. And this is a big issue, many other artists are labeled one hit wonders. 
@@ -68,35 +86,36 @@
       adipiscing elit. Nam sed ligula ac dui tempus luctus. Proin eu quam volutpat, blandit ligula sed, aliquam libero. 
       In dictum ante justo, a euismod elit ultrices at. Donec ac ante at nunc accumsan hendrerit. Etiam malesuada suscipit 
       vehicula. Nulla vel urna ut ligula ultrices rhoncus. Integer augue massa, porta at nisl at, egestas aliquet risus.
-       Duis luctus ligula dolor, vitae pretium nisi mollis eu.
+        Duis luctus ligula dolor, vitae pretium nisi mollis eu.
     </p>
 
     <p class="article">
       Mauris eget tempus felis. Nam blandit est mi, eget suscipit tellus porttitor eget. Vestibulum rhoncus orci sapien, 
       rutrum efficitur justo mattis vitae. Quisque tellus enim, malesuada sit amet tellus vitae, dignissim egestas leo. Vivamus
       pellentesque metus dolor, quis blandit erat venenatis vel. Orci varius natoque penatibus et magnis dis parturient montes,
-       nascetur ridiculus mus. Nullam sit amet tortor ligula. Etiam a condimentum lorem, a tempus quam. Fusce auctor vestibulum
+        nascetur ridiculus mus. Nullam sit amet tortor ligula. Etiam a condimentum lorem, a tempus quam. Fusce auctor vestibulum
         purus id gravida. Maecenas consequat tortor imperdiet cursus gravida. Praesent finibus libero ut ipsum molestie, ac molestie nisl tempus.
-         Nullam posuere condimentum enim quis faucibus. Nulla egestas fringilla nisl, ut scelerisque dui euismod et.
+          Nullam posuere condimentum enim quis faucibus. Nulla egestas fringilla nisl, ut scelerisque dui euismod et.
 
     </p>
 
     <p class="article">
       Nulla facilisi. Pellentesque bibendum lorem eget pellentesque aliquet. Ut non fermentum nulla. 
       Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam luctus
-       odio eu sagittis scelerisque. Nunc facilisis nisi eros, in fermentum metus lobortis quis. Praesent ac
-       ullamcorper lectus, nec feugiat diam. Suspendisse potenti.
+        odio eu sagittis scelerisque. Nunc facilisis nisi eros, in fermentum metus lobortis quis. Praesent ac
+        ullamcorper lectus, nec feugiat diam. Suspendisse potenti.
 
     </p>
 
     <!-- Playlist -->
     <div class="boost-playlist">
-      
       <div class = "boost-listening">
         <Boosting /> 
       </div>
 
-      <Playlist {playlist} {cooldowns} {song}/>  
+      <div class="playlist">
+        <Playlist {playlist} {cooldowns} {song}/>  
+      </div>
 
       <div class="button-wrapper">
         <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button>
@@ -108,25 +127,49 @@
       Sed ac est risus. Nam congue massa at diam finibus semper. Ut ac diam ac mauris vulputate blandit. 
       Cras pellentesque nunc quam, quis maximus lacus fermentum quis. Vivamus eget iaculis odio, in blandit 
       ipsum. Proin gravida purus sed dolor vehicula fringilla. Nunc maximus tempus velit, id consequat turpis
-       ullamcorper et. Nunc posuere libero nec ligula placerat aliquam. Donec imperdiet risus in ante euismod
+        ullamcorper et. Nunc posuere libero nec ligula placerat aliquam. Donec imperdiet risus in ante euismod
         ultrices. Proin vestibulum lectus iaculis, congue enim eu, dapibus tortor.
     </p>
 
+    <!-- Listening Party -->
     <ListeningParty />
 
-    <p class="article">
+    <p class="article" style="margin-bottom: 10vh">
       Sed ac est risus. Nam congue massa at diam finibus semper. Ut ac diam ac mauris vulputate blandit. 
       Cras pellentesque nunc quam, quis maximus lacus fermentum quis. Vivamus eget iaculis odio, in blandit 
       ipsum. Proin gravida purus sed dolor vehicula fringilla. Nunc maximus tempus velit, id consequat turpis
-       ullamcorper et. Nunc posuere libero nec ligula placerat aliquam. Donec imperdiet risus in ante euismod
+        ullamcorper et. Nunc posuere libero nec ligula placerat aliquam. Donec imperdiet risus in ante euismod
         ultrices. Proin vestibulum lectus iaculis, congue enim eu, dapibus tortor.
-    </p>
+    </p>  
+
+    <div id="footer">
+      Try out our full demo in 
+      <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=444-2386&t=dZ8PawirI0kKnMej-0&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=444%3A2386&show-proto-sidebar=1" target="_blank">Figma</a> 
+      or check out this article's code in our 
+      <a href="https://github.com/sophifang/tiktok-listening-party" target="_blank">GitHub repo</a>!
+    </div>  
+  </div>
 
 </main>
 
 <style>
+  #footer {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10vh;
+  }
+
+  .container{
+    position: relative;
+    width: 100%;
+  }
+
+  .promo{
+    margin-top: 40px;
+    width: 100%;
+  }
+
   h1{
-    width: 800px;
     font-size: 40px;
     margin-bottom: 10px;
   }
@@ -134,7 +177,6 @@
   .authors{
     font-size: 15px;
     display: inline;
-    margin-bottom: 40px;
     font-weight: 400;
   }
 
@@ -142,10 +184,6 @@
     display: inline;
     font-size: 15px;
     color: #7D7D7D
-  }
-
-  .article{
-    width: 800px;
   }
 
   nav {
@@ -161,47 +199,67 @@
 
   ul {
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 2.5vw;
     list-style: none;
     align-items: center;
     justify-content: center;
   }
   
   li{
-    margin-right: 20px;
+    margin: auto;
+    padding-right: 2.5vw;
   }
 
   .menu-heading{
-    margin: 0px;
-    width: 1200px;
     font-size: 40px;
+    margin: 0px;
+    width: 85vw;
   }
 
   .page{
-    margin-top: 80px;
+    max-width: 800px;
     text-align: left;
     display: grid;
     align-items: center;
     justify-content: center;
 
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-variation-settings: "slnt" 0;
+
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .boost-playlist{
-    display: grid;
-		grid-template-columns: 1fr 1fr;
+  @media (min-width: 650px) {
+    .boost-playlist{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 0px;
+      grid-template-areas:
+        'top-left-container top-right-container'
+        'bottom-left-container bottom-right-container';
+    }
   }
   
   .boost-listening{
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
 
   .button-wrapper{

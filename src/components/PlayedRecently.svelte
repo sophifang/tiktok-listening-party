@@ -1,29 +1,9 @@
 <script>
     import PlayedRecentlyBox from './PlayedRecentlyBox.svelte';
 
-    export let playlist, cooldowns;
+    export let cooldowns;
     let n = cooldowns.length;  
-    let updateCooldown = 60_000;
-
-    // // Update Cooldowns
-    // function updateQueue(){  
-    //     let i;
-    //     for (i = 0; i < n; i++){
-    //         cooldowns[i][3] = cooldowns[i][3] - 1;
-    //         if (cooldowns[i][3] < 1){
-    //            playlist.push(cooldowns.shift());
-    //            n = n - 1;
-    //            i--;
-    //            if (n <= 0){
-    //                 break;
-    //            }
-    //         }
-    //     }
-    // }  
-    // $: if(n > 0){
-    //     setInterval(updateQueue, updateCooldown);
-    // }
-  </script>
+</script>
   
 <main>
     <!-- Played Recently Table -->
@@ -42,7 +22,7 @@
         <tr>
             <td>
             <PlayedRecentlyBox>
-                <span slot="cover"><img src={row[2]}/></span>
+                <span slot="cover"><img src={row[2]} width="42px" height="42px"/></span>
                 <span slot="song">{row[0]}</span>
                 <span slot="album">{row[1]}</span>
                 <span slot="cooldown">{row[3]} min.</span>
@@ -66,7 +46,7 @@
         flex-flow: column;
         justify-content: center;
 
-        font-size: 15px;
+        font-size: 10px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -79,12 +59,12 @@
 		padding-left: 16px;
 		padding-right: 16px;
         border-radius: 10px;
-		margin-bottom: 12px;
+		margin-bottom: 8px;
         background: #50504d
 	}
 
     span[slot="song"]{
-        font-size: 15px;
+        font-size: 10px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -94,7 +74,7 @@
     }
 
     span[slot="album"]{
-        font-size: 10px;
+        font-size: 7px;
         color: #BFBFBF;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -104,7 +84,7 @@
     }
 
     span[slot="cooldown"]{
-        font-size: 12px;
+        font-size: 8px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -112,9 +92,14 @@
         font-style: normal;
         font-variation-settings: "slnt" 0;
     }
+
+    span[slot="cover"]{
+        width: 42px;
+        height: 42px;
+    }
     
     th{
-        font-size: 18px;
+        font-size: 12px;
         color: #F6F3F7;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -122,12 +107,12 @@
         font-style: normal;
         font-variation-settings: "slnt" 0;
         text-align: left;
-        padding-bottom: 12px;
+        padding-bottom: 6px;
     }
 
     .numSongs{
         display:inline; 
-        font-size: 15px; 
+        font-size: 10px; 
         color: #BFBFBF
     }
 
