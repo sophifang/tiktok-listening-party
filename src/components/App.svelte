@@ -23,10 +23,10 @@
     ["Heart Beats Faster", "Color Pop", "album_cover/heart_beats_faster.png", 15]
   ];  
 
-  // Temporary functions for buttons
-  async function boosted(){
-    playlist[Math.floor(Math.random() * playlist.length)][3] += 1;
-  };
+  // // Temporary functions for buttons
+  // async function boosted(){
+  //   playlist[Math.floor(Math.random() * 6)][3] += 1;
+  // };
 
   async function reset(){
     for(let i=0; i < playlist.length; i++){
@@ -110,7 +110,7 @@
     <!-- Playlist -->
     <div class="boost-playlist">
       <div class = "boost-listening">
-        <Boosting /> 
+        <Boosting {playlist} /> 
       </div>
 
       <div class="playlist">
@@ -118,7 +118,7 @@
       </div>
 
       <div class="button-wrapper">
-        <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button>
+        <!-- <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button> -->
         <button on:click={reset}>Reset</button>
       </div>
     </div>
