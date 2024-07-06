@@ -29,8 +29,8 @@
 		padding-right: 11px;
         border-radius: 7px;
 		margin-bottom: 8px;
-        background: rgb(143,78,112);
-        background: linear-gradient(95deg, rgba(143,78,112,1) 0%, rgba(107,66,114,1) 100%);
+        background: rgb(114,87,123);
+        background: linear-gradient(90deg, rgba(114,87,123,1) 0%, rgba(81,60,89,1) 100%);
 	}
 
     .centerCover {
