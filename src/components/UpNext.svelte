@@ -41,17 +41,17 @@
         <tr animate:flip={{duration:500}}>
             <td>
             <UpNextBox>
-                <span slot="cover"><img src={row[2]}/></span>
+                <span slot="cover"><img src={row[2]} width="42px" height="42px"/></span>
                 <span slot="song">{row[0]}</span>
                 <span slot="album">{row[1]}</span>
                 <span slot="boost">
                     {#if pos[row[0]] > currPos}
                         <div id="image" class='centerBoost'>
-                            <img src={greenArrow}/>
+                            <img src={greenArrow} width="14px" height="17px"/>
                         </div>
                     {:else if pos[row[0]] < currPos}
                         <div id="image">
-                            <img src={redArrow}/>
+                            <img src={redArrow} width="14px" height="17px"/>
                         </div>
                     {:else}
                         {row[3]}
@@ -72,7 +72,7 @@
   
 <style>
     span[slot="song"]{
-        font-size: 15px;
+        font-size: 10px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -82,7 +82,7 @@
     }
 
     span[slot="album"]{
-        font-size: 10px;
+        font-size: 7px;
         color: #BFBFBF;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -92,7 +92,7 @@
     }
 
     span[slot="boost"]{
-        font-size: 12px;
+        font-size: 8px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -100,9 +100,15 @@
         font-style: normal;
         font-variation-settings: "slnt" 0;
     }
+
+    span[slot="cover"]{
+        width: 42px;
+        height: 42px;
+    }
+
     
     th{
-        font-size: 18px;
+        font-size: 12px;
         color: #F6F3F7;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -110,7 +116,7 @@
         font-style: normal;
         font-variation-settings: "slnt" 0;
         text-align: left;
-        padding-bottom: 12px;
+        padding-bottom: 6px;
     }
 
     .centerBoost{
@@ -131,7 +137,7 @@
 
     .numSongs{
         display:inline; 
-        font-size: 15px; 
+        font-size: 10px; 
         color: #BFBFBF
     }
 </style>

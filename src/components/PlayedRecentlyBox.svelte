@@ -21,15 +21,15 @@
 
 <style>
     section{
-		width: 352px;
-        height: 78px;
+		width: 246px;
+        height: 55px;
 		display: grid;
 		grid-template-columns: 1fr 3fr 1fr;
-		padding-left: 16px;
-		padding-right: 16px;
-        border-radius: 10px;
-		margin-bottom: 12px;
-        background: #50504d;
+		padding-left: 11px;
+		padding-right: 11px;
+        border-radius: 7px;
+		margin-bottom: 8px;
+        background: rgb(103,62,104);
 	}
 
     .centerCover {

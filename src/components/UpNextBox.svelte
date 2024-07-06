@@ -21,16 +21,16 @@
 
 <style>
     section{
-		width: 352px;
-        height: 78px;
+		width: 246px;
+        height: 55px;
 		display: grid;
 		grid-template-columns: 1fr 3fr 1fr;
-		padding-left: 16px;
-		padding-right: 16px;
-        border-radius: 10px;
-		margin-bottom: 12px;
-        background: rgb(117,116,112);
-        background: linear-gradient(95deg, rgba(117,116,112,1) 0%, rgba(93,92,88,1) 100%);
+		padding-left: 11px;
+		padding-right: 11px;
+        border-radius: 7px;
+		margin-bottom: 8px;
+        background: rgb(143,78,112);
+        background: linear-gradient(95deg, rgba(143,78,112,1) 0%, rgba(107,66,114,1) 100%);
 	}
 
     .centerCover {
