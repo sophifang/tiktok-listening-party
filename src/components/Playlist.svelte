@@ -38,8 +38,8 @@
     }
 
     .playlist{
-        background: rgb(190,84,100);
-        background: linear-gradient(-187deg, #CD5063 0%, #532E5A 21%);
+        background: rgb(163,127,174);
+        background: linear-gradient(-187deg, rgba(163,127,174,1) 0%, rgba(68,50,75,1) 21%);
         border-radius: 12px;
         width: 301px;
         height: 608px;
