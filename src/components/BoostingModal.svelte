@@ -32,7 +32,7 @@
 		{#each allSongs as entry}
 			{#if visible[entry[0]] === true}
 				<!-- To Boost Icon -->
-				<div class ="icon">
+				<div class ="boost-icon">
 					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
 					<img class="song-cover" src={entry[2]} alt="song-record-cover">
 				</div>
@@ -42,17 +42,15 @@
 					<!-- Default Song Icon -->
 					<div class ="icon">
 						<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[entry[0]] = true)}/>
-					 	<img class="song-cover" src={entry[2]} alt="song-record-cover">
+						<img class="song-cover" src={entry[2]} alt="song-record-cover">
 						<div class="song-title">{entry[0]}</div>
 					</div>
 			{/if}	
 		{/each}
-
-		<div class ="icon">
+		<div class ="cooldown-icon">
 			<input type="image" src="song-icon.png" id="current" alt="song-icon" />
 			<img class="song-cover" id="current-overlaid" src="album_cover/street_symphony.png" alt="song-record-cover">
 			<div class="song-title" id="current-overlaid">Street Symphony</div>
-			
 		</div>
 
 	</div>
@@ -61,12 +59,34 @@
 </main>
 
 <style>
+	.cooldown-icon{
+		display: inline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+		width: 70%;
+		height: 70%;
+		margin: auto;
+	}
+
+	.boost-icon{
+		display: inline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+		width: 70%;
+		height: 70%;
+		margin: auto;
+	}
 
 	.icon{
         display: inline;
         align-items: center;
         justify-content: center;
         text-align: center;
+		width: 70%;
+		height: 70%;
+		margin: auto;
     }
 
     
@@ -75,12 +95,14 @@
         transform: translate(-98%, 84.5%);
         border-radius: 25px;
     }
+
     .icon-buttons{
         max-width: 300px;
         height: 250px;
         transform: translate( -100%, -3%);
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-auto-rows: 1fr;
     }
     
     input{
@@ -93,21 +115,21 @@
         transform: translate( -180%, 20%);
         cursor: pointer;
         position: absolute;
-        z-index: 1;
 	}
 
 	
     .song-title{
-        font-size: 6px;
+        font-size: 5px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
-        max-width: 45px;
-        text-align: center;
-        transform: translate( 11px, -35px);
+        transform: translate( 0px, -32px);
+		margin: auto;
+		width: 90%;
     }
 
-	.song-icon:hover{
+	.icon:hover{
 		background-color: rgba(255, 255, 255, 0.176);
+		opacity: 0.7;
 		border-radius: 6px;
 	}
 

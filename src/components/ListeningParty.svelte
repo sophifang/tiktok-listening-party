@@ -189,6 +189,7 @@
         border-radius: 15px;
         background-color: rgba(22,22,34,0.2);
         box-sizing: border-box;
+        color: white;
     }
 
     .comment-box::placeholder {
