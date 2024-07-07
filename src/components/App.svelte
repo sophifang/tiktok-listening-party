@@ -113,8 +113,7 @@
       </div>
     </div>
     <div class="button-wrapper">
-      <!-- <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button> -->
-      <button on:click={reset}>Reset</button>
+      <button on:click={reset} class="reset-button">Reset</button>
     </div>
 
     <p class="article">
@@ -261,6 +260,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 10px;
+  }
+
+  .reset-button{
+    color: white;
+    background-color: #EC1254;
+    border-radius: 8px;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .listeningparty {
