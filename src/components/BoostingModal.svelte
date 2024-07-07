@@ -1,58 +1,68 @@
 <script>
 	import UpNext from './UpNext.svelte';
 	import PlayedRecently from './PlayedRecently.svelte';
-	export let cooldowns;
-    export let playlist;
+	export let cooldowns, playlist;
 
 
-	let allSongs = playlist.concat(cooldowns);
+	let pos = {};
 
 	// button click handler 
 	let visible = {};
-	for (let elem of allSongs) {
-		visible[elem[0]] = false;
+	let clicked = {};
+	for (let elem of playlist) {
+		visible[elem[0]], clicked[elem[0]] = false;
 	}; 
 
 	//boosts a song
 	async function boosted(song){
-		for (let elem of allSongs) {
+		for (let elem of playlist) {
 			if (elem[0] == song) {
 				elem[3] += 1;
+				//set to unclicked
 				visible[elem[0]] = false;
+
 			}
 		} 
   	};
-	
 </script>
 
 <main>
 	<img class = "pop-up" src = "Boosts.png" alt = "pop-up screen" />
 
 	<div class="icon-buttons">
-		{#each allSongs as entry}
+		{#each playlist as entry}
 			{#if visible[entry[0]] === true}
 				<!-- To Boost Icon -->
 				<div class ="icon">
-					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
+					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])} >
 					<img class="song-cover" src={entry[2]} alt="song-record-cover">
+					<!-- <div class="song-title">Queue: {pos[0]}</div> -->
+					<div class="song-title">Queue: </div>
+					 
 				</div>
-
 
 				{:else}
 					<!-- Default Song Icon -->
 					<div class ="icon">
-						<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[entry[0]] = true)}/>
+						<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[entry[0]] = true)} />
 					 	<img class="song-cover" src={entry[2]} alt="song-record-cover">
 						<div class="song-title">{entry[0]}</div>
 					</div>
 			{/if}	
 		{/each}
 
+		<!-- Cooldown Song Icon -->
+		{#each cooldowns as entry}
+			<div class ="icon">
+				<input type="image" src="cooldown-{entry[0]}.png" id="timed-out" alt="song-icon" />
+				<div class="song-title">{entry[0]}</div>
+			</div>
+		{/each}
+
+		<!-- Current Song Icon -->
 		<div class ="icon">
-			<input type="image" src="song-icon.png" id="current" alt="song-icon" />
-			<img class="song-cover" id="current-overlaid" src="album_cover/street_symphony.png" alt="song-record-cover">
-			<div class="song-title" id="current-overlaid">Street Symphony</div>
-			
+			<input type="image" src="current-song-icon.png" id="timed-out" alt="song-icon" />
+			<div class="song-title">Street Symphony</div>
 		</div>
 
 	</div>
@@ -96,7 +106,6 @@
         z-index: 1;
 	}
 
-	
     .song-title{
         font-size: 6px;
         color: #D9D9D9;
@@ -111,16 +120,9 @@
 		border-radius: 6px;
 	}
 
-	#current{
-		filter: blur(0.8px);
-		background-color: rgba(255, 255, 255, 0.176);
+	#timed-out{
+		background-color: #454542;
 		border-radius: 6px;
 	}
-
-	#current-overlaid{
-		filter: blur(0.4px);
-	}
-
-
 	
 </style>

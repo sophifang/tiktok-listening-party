@@ -105,7 +105,7 @@
     <!-- Playlist -->
     <div class="boost-playlist">
       <div class = "boost-listening">
-        <Boosting {playlist} {cooldowns} /> 
+        <Boosting {playlist} {cooldowns}/> 
       </div>
 
       <div class="playlist">
@@ -113,8 +113,7 @@
       </div>
     </div>
     <div class="button-wrapper">
-      <!-- <button on:click={boosted} style="margin-right: 10px">Boost Random Song</button> -->
-      <button on:click={reset}>Reset</button>
+      <button class="reset-button" on:click={reset}> Reset </button>
     </div>
 
     <p class="article">
@@ -262,6 +261,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: px;
   }
 
   .listeningparty {
@@ -269,5 +269,17 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px; /* Adjust margin top as needed */
+  }
+
+  .reset-button{
+    background-color: #FF004F;
+    color: #F6F3F7;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 </style>
