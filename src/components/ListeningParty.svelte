@@ -1,4 +1,6 @@
 <script>
+    import AudioPlayer from './AudioPlayer.svelte';
+
     let comment = '';
 
     let page = 0;
@@ -13,14 +15,14 @@
 <main>
     {#if page === 0}
         <div class = "first">
-            <div class="box">
-                <p class="title">So Long, London</p>
-                <img src="album.png" alt="Album cover" class="album-cover-home">
+            <div class = "content">
+                <img class="phone-container" src="background.png" alt="Phone"/>
+                <p class="title">Street Symphony</p>
+                <img src="album_cover/street_symphony.png" alt="Album cover" class="album-cover-home">
                 <div class="click-lyrics" on:click={next}>
-                    <span> Stopped trying to drill the safe <br> </span>
-                    <span class="different-color"> Thinkin, how much sad did <br> </span>
-                    <span class="different-color"> you think I had <br> </span>
-                    <span> Did you think I had in me? </span>
+                    <span class="different-color"> Street symphony, surviving <br> </span>
+                    <span class="different-color"> through the storm, <br> </span>
+                    <span> Voices of the block, <br> </span>
                 </div>
                 <input bind:value={comment} class="comment-box" placeholder="Comment">
                 <img src="tiktok_emoji.png" alt="Comment emoji" class="emoji">
@@ -37,282 +39,293 @@
     {/if}
 
     {#if page === 1}
-        <div class = "second">
-            <div class="box">
-                <img src="album.png" alt="Album cover" class="album-cover-lyrics">
+        <div class="second">
+            <div class="content">
+                <img class="lyrics-background" src="lyrics_background.png" alt="Phone"/>
+                <img src="album_cover/street_symphony.png" alt="Album cover" class="album-cover-lyrics">
                 <div class="back-button" on:click={back}>
-                    <img src="left_arrow.png" width="20"/>
+                    <img src="left_arrow.png" width="12"/>
                 </div>
                 <p class="now-playing">Now Playing: </p>
-                <p class="song-name"> So Long, London </p> <br>
-                <p class="album-name"> The Tortured Poets Department </p>
+                <p class="song-name">Street Symphony</p> <br>
+                <p class="album-name">Urban Rhythms</p>
                 <p class="song-lyrics">
-                    <span> I saw in my mind fairy lights <br> </span>
-                    <span> through the mist <br> </span>
-                    <span> I kept calm and carried the <br> </span>
-                    <span> weight of the rift <br> </span>
-                    <span> Pulled him in tighter each time <br> </span>
-                    <span> he was drifting away <br> </span>
-                    <span> My spine split from carrying <br> </span>
-                    <span> us up the hill <br> </span>
-                    <span> Wet through my clothes, <br> </span>
-                    <span> weary bones caught the chill <br> </span>
-                    <span> I stopped trying to make him laugh <br> </span>
-                    <span> Stopped trying to drill the safe <br> </span>
-                    <span class="different-color"> Thinkin, how much sad did <br> </span>
-                    <span class="different-color"> you think I had <br> </span>
-                    <span> Did you think I had in me? <br> </span>
-                    <span> Oh, the tragedy ... <br> </span>
-                    <span> So long, London <br> </span>
-                    <span> You'll find someone ... <br> </span>
-                    <span> I didn't opt in to be your odd man out <br> </span>
-                    <span> I founded the club she's heard <br> </span>
-                    <span> great things about <br> </span>
-                    <span> I left all I knew, you left me at <br> </span>
-                    <span> the house by the Heath <br> </span>
-                    <span> I stopped CPR, after all it's no use <br> </span>
-                    <span> The spirit was gone, <br>  </span>
-                    <span> we would never come to <br> </span>
-                    <span> And I'm pissed off you let me give <br> </span>
-                    <span> you all that youth for free <br> </span>
-                    <span> For so long, London <br> </span>
-                    <span> Stitches undone <br> </span>
-                    <span> Two graves, one gun <br> </span>
-                    <span> I'll find someone ... <br> </span>
-                    <span> And you say I abandoned the ship <br> </span>
-                    <span> But I was going down with it <br> </span>
-                    <span> My white knuckle dying grip <br> </span>
-                    <span> Holding tight to your quiet <br> </span>
-                    <span> resentment and <br> </span>
-                    <span> My friends said it isn't right <br> </span>
-                    <span> to be scared <br> </span>
-                    <span> Every day of a love affair <br> </span>
-                    <span> Every breath feels like rarest air <br> </span>
-                    <span> When you're not sure if he <br> </span>
-                    <span> wants to be there <br> </span>
-                    <span> So how much sad did you think I had, <br> </span>
-                    <span> Did you think I had in me? <br> </span>
-                    <span> How much tragedy? <br> </span>
-                    <span> Just how low did you think I'd go? <br> </span>
-                    <span> Before I'd self-implode <br> </span>
-                    <span> Before I'd have to go be free <br> </span>
-                    <span> You swore that you loved me but <br> </span>
-                    <span> where were the clues? <br> </span>
-                    <span> I died on the altar waiting for the proof <br> </span>
-                    <span> You sacrificed us to the gods of <br> </span>
-                    <span> your bluest days <br> </span>
-                    <span> And I'm just getting color back <br> </span>
-                    <span> into my face <br> </span>
-                    <span> I'm just mad as hell cause I <br> </span>
-                    <span> loved this place <br> </span>
-                    <span> For so long, London <br> </span>
-                    <span> Had a good run <br> </span>
-                    <span> A moment of warm sun <br> </span>
-                    <span> But I'm not the one <br> </span>
-                    <span> So long, London <br> </span>
-                    <span> Stitches undone <br> </span>
-                    <span> Two graves, one gun <br> </span>
-                    <span> You'll find someone ... <br> </span>
+                    <span> Raw feel, I'm street poetry <br> </span>
+                    <span> birthed from grime, <br> </span>
+                    <span> Echoes of struggle, gotta <br> </span>
+                    <span> climb, penny to a dime, <br> </span>
+                    <span> Glocks pop, corner blocks, <br> </span>
+                    <span> the soundtrack of pain, <br> </span>
+                    <span> Chains shine, move swift, <br> </span>
+                    <span> dodgin' puddles in the rain. <br> </span>
+                    <span> Brick by brick, stack <br> </span>
+                    <span> knowledge, stack loot, <br> </span>
+                    <span> Whippin' rhymes in the booth, <br> </span>
+                    <span> sharp as tailored suits, <br> </span>
+                    <span> Swift moves, chess game, <br> </span>
+                    <span> every piece in place, <br> </span>
+                    <span> Mask on, task on, <br> </span>
+                    <span> never catch a case. <br> </span>
+                    <span> Hustle on, grind strong, <br> </span>
+                    <span> till the break of dawn, <br> </span>
+                    <span class="different-color"> Street symphony, surviving <br> </span>
+                    <span class="different-color"> through the storm, <br> </span>
+                    <span> Voices of the block, <br> </span>
+                    <span> stories etched in stone, <br> </span>
+                    <span> Gritty tales, hard knocks, <br> </span>
+                    <span> made it on my own. <br> </span>
+                    <span> Studio’s a sanctuary, <br> </span>
+                    <span> church for lost souls, <br> </span>
+                    <span> Beats bang, dreams hang, <br> </span>
+                    <span> heavy on our goals, <br> </span>
+                    <span> Hard times breed legends, <br> </span>
+                    <span> started from the bottom, <br> </span>
+                    <span> Rising from the dust, like <br> </span>
+                    <span> a phoenix, we got ‘em. <br> </span>
+                    <span> Crown tilted, heavy is the <br> </span>
+                    <span> head that’s gotta wear it, <br> </span>
+                    <span> Verses cut deep, true grit, <br> </span>
+                    <span> can't compare it, <br> </span>
+                    <span> Through the fire, wordsmith, <br> </span>
+                    <span> spitting hot coal, <br> </span>
+                    <span> Street preacher, living proof, <br> </span>
+                    <span> dug out the soul. <br> </span>
+                    <span> Hustle on, grind strong, <br> </span>
+                    <span> till the break of dawn, <br> </span>
+                    <span> Street symphony, surviving <br> </span>
+                    <span> through the storm, <br> </span>
+                    <span> Voices of the block, <br> </span>
+                    <span> stories etched in stone, <br> </span>
+                    <span> Gritty tales, hard knocks, <br> </span>
+                    <span> made it on my own. <br> </span>
                 </p>
-                <img src="song_length.png" alt="Song length" class="song-length">
+                <div class ="song-length">
+                    <AudioPlayer />
+                </div>
             </div>
         </div>
     {/if}
 </main>
 
 <style>
-    .box {
+    .phone-container {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 330px;
-        height: 632px;
-        background: rgb(178,177,173);
-        background: linear-gradient(-184deg, rgba(178,177,173,1) 0%, rgba(133,132,129,1) 21%);
+        width: 301px;
+        height: 608px;
         border-radius: 12px;
+    }
+
+    .lyrics-background {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 301px;
+        height: 608px;
+        border-radius: 12px;
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 301px;
+        height: 608px;
     }
 
     .title {
         font-family: 'Inter', sans-serif;
         font-weight: bold;
-        font-size: 16px;
-        color: white;
+        font-size: 15px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        top: 130px;
-        left: 97px;
+        top: 145px;
     }
 
     .album-cover-home {
         position: absolute;
-        top: 180px;
-        left: 70px;
-        width: 180px;
-        height: auto;
+        top: 190px;
+        width: 150px;
     }
 
     .click-lyrics {
         font-family: 'Inter', sans-serif;
         font-weight: bold;
         font-size: 13px;
-        color: #424242;
+        color: rgba(35,27,38,1);
         position: absolute;
-        bottom: 195px;
+        bottom: 200px;
         cursor: pointer;
     }
 
+    .click-lyrics:hover {
+        width: 220px;
+        padding: 6px;
+        border-radius: 20px;
+        background-color: rgba(45,25,54,0.2);
+        box-sizing: border-box;
+    }
+
     .different-color {
-        color: white;
+        color: rgba(255,255,255,1);
     }
 
     .comment-box {
         font-family: 'Inter', sans-serif;
         font-size: 14px;
         position: absolute;
-        bottom: 20px;
-        left: 20px;
-        width: 140px;
-        padding: 8px;
+        bottom: 15px;
+        left: 15px;
+        width: 120px;
+        padding: 6px;
         border: none;
         border-radius: 15px;
-        background-color: rgba(247,245,245,1);
+        background-color: rgba(22,22,34,0.2);
         box-sizing: border-box;
+    }
+
+    .comment-box::placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        position: absolute;
+        bottom: 8px;
+        left: 12px;
+        color: rgba(204,204,204,1);
     }
 
     .emoji {
         position: absolute;
-        bottom: 27px;
-        left: 135px;
-        width: 20px;
-        height: auto;
+        bottom: 22px;
+        left: 110px;
+        width: 15px;
     }
 
     .recharge-icon {
         position: absolute;
-        bottom: 27px;
-        left: 175px;
-        width: 30px;
-        height: auto;
+        bottom: 23px;
+        left: 168px;
+        width: 20px;
     }
 
     .recharge-text {
         font-family: 'Inter', sans-serif;
         font-weight: normal;
-        font-size: 8px;
-        color: white;
+        font-size: 7px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        bottom: 14px;
-        left: 172px;
+        bottom: 8px;
+        left: 162px;
     }
 
     .request-icon {
         position: absolute;
-        bottom: 27px;
-        left: 215px;
-        width: 30px;
-        height: auto;
+        bottom: 23px;
+        left: 205px;
+        width: 20px;
     }
 
     .request-text {
         font-family: 'Inter', sans-serif;
         font-weight: normal;
-        font-size: 8px;
-        color: white;
+        font-size: 7px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        bottom: 14px;
-        left: 215px;
+        bottom: 8px;
+        left: 201px;
     }
 
     .album-icon {
         position: absolute;
-        bottom: 27px;
-        left: 255px;
-        width: 30px;
-        height: auto;
+        bottom: 23px;
+        left: 239px;
+        width: 20px;
     }
 
     .song-text {
         font-family: 'Inter', sans-serif;
         font-weight: normal;
-        font-size: 8px;
-        color: white;
+        font-size: 7px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        bottom: 14px;
-        left: 260px;
+        bottom: 8px;
+        left: 240px;
     }
 
     .share-icon {
         position: absolute;
         bottom: 25px;
-        left: 290px;
-        width: 30px;
-        height: auto;
+        left: 272px;
+        width: 17px;
     }
 
     .share-text {
         font-family: 'Inter', sans-serif;
         font-weight: normal;
-        font-size: 8px;
-        color: white;
+        font-size: 7px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        bottom: 14px;
-        left: 293px;
+        bottom: 8px;
+        left: 270px;
     }
 
     .back-button {
         position: absolute;
-        top: 40px;
-        left: 290px;
-        height: auto;
+        top: 45px;
+        left: 270px;
         cursor: pointer;
     }
 
     .album-cover-lyrics {
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 30px;
-        width: 60px;
-        height: auto;
+        width: 50px;
     }
 
     .now-playing {
         font-family: 'Inter', sans-serif;
         font-weight: normal;
-        font-size: 13px;
-        color: white;
+        font-size: 12px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        top: 70px;
-        left: 100px;
+        top: 60px;
+        left: 90px;
     }
 
     .song-name {
         font-family: 'Inter', sans-serif;
         font-weight: bold;
-        font-size: 13px;
-        color: white;
+        font-size: 12px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        top: 70px;
-        left: 180px;
+        top: 60px;
+        left: 167px;
     }
 
     .album-name {
         font-family: 'Inter', sans-serif;
         font-weight: normal;
-        font-size: 13px;
-        color: white;
+        font-size: 12px;
+        color: rgba(255,255,255,1);
         position: absolute;
-        top: 90px;
-        left: 100px;
+        top: 75px;
+        left: 90px;
     }
 
     .song-lyrics {
         font-family: 'Inter', sans-serif;
         font-weight: bold;
         font-size: 13px;
-        color: #424242;
+        color: rgba(35,27,38,1);
         position: absolute;
-        top: 130px;
+        top: 110px;
         height: 440px;
         overflow-y: auto;
         scrollbar-width: none;
@@ -321,8 +334,6 @@
     .song-length {
         position: absolute;
         bottom: 20px;
-        left: 30px;
-        width: 270px;
-        height: auto;
+        width: 250px;
     }
 </style>

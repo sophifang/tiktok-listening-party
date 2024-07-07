@@ -131,7 +131,9 @@
     </p>
 
     <!-- Listening Party -->
-    <ListeningParty />
+    <div class="listeningparty">
+      <ListeningParty />
+    </div>
 
     <p class="article" style="margin-bottom: 10vh">
       Sed ac est risus. Nam congue massa at diam finibus semper. Ut ac diam ac mauris vulputate blandit. 
@@ -265,5 +267,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .listeningparty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin top as needed */
   }
 </style>
