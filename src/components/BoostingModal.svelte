@@ -1,5 +1,8 @@
 <script>
 	import UpNext from './UpNext.svelte';
+	import PlayedRecently from './PlayedRecently.svelte';
+    import { treemapSlice } from 'd3';
+	export let cooldowns;
     export let playlist;
 
 	/////////  Song Numbering  ////////////
@@ -10,22 +13,23 @@
 	// 	return counter;
 	// }
 
+	let allSongs = playlist.concat(cooldowns);
+
 	// button click handler 
 	let visible = {};
-	for (let elem of playlist) {
+	for (let elem of allSongs) {
 		visible[elem[0]] = false;
 	}; 
 
-	//boosting alg
+	//boosts a song
 	async function boosted(song){
-		for (let elem of playlist) {
+		for (let elem of allSongs) {
 			if (elem[0] == song) {
 				elem[3] += 1;
+				visible[elem[0]] = false;
 			}
 		} 
   	};
-
-
 	
 </script>
 
@@ -33,16 +37,22 @@
 	<img class = "pop-up" src = "Boosts.png" alt = "pop-up screen" />
 
 	<div class="icon-buttons">
-		{#each playlist as song}
+		{#each allSongs as song}
 			{#if visible[song[0]] === true}
-				<label>
-					<input class="to-boost" type="image" src="boost_ clicked.png" alt="song icon" on:click={() => boosted(song[0])}>
-				</label>
 
-					{:else}
-				 	<label>
+
+				<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(song[0])}>
+				<!-- <img class="song-cover" src={song[2]} alt="song-record-cover"> -->
+				<!-- <div class="song-title">{song[0]}</div> -->
+
+				{:else}
+					<!-- <div>
 						<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[song[0]] = true)}/>
-				 	</label>
+					 <img class="song-cover" src={song[2]} alt="song-record-cover">
+					</div> -->
+				 	<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[song[0]] = true)}/>
+					 <img class="song-cover" src={song[2]} alt="song-record-cover">
+					 <!-- <div class="song-title">{song[0]}</div> -->
 			{/if}
 			
 		{/each}
@@ -55,38 +65,50 @@
 	
 	.pop-up{
 		width: 313.5px;
-        transform: translate(-98%, 81%);
+        transform: translate(-98%, 84.5%);
 		border-radius: 25px;
 	}
 
 
 	.icon-buttons{
-		width: 300px;
+		text-align: center;
+		max-width: 300px;
 		height: 250px;
-        transform: translate( -100%, -10%);
+        transform: translate( -100%, -6%);
+	}
+	
+	input{
+		max-width: 46px;
 	}
 
 	.song-icon{
-		scale: 0.7;
-		/* padding: 1px; */
+		/* padding-left: 4%;
+		padding-right: 4%;
+		padding-top: 1.3%; */
 	}
 
 	.to-boost{
-		scale: 0.7;
+		/* padding-left: 4%;
+		padding-right: 4%;
+		padding-top: 1.3%; */
 	}
 
-	/* .song-num{
-		font-size: 10px;
+	.song-cover{
+		max-width:18px;
+		border-radius: 100%;
+		transform: translate( -275%, -190%);
+		cursor: pointer;
+	}
+
+	/* .song-title{
+		font-size: 5px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-		width: 10px;
-		transform: translate( 10%, 20%);
-
+		max-width: 50px;
+		transform: translate( 200%, -500%);
 	} */
+
+
 
 
 	

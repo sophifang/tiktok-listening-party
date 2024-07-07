@@ -23,11 +23,6 @@
     ["Heart Beats Faster", "Electric Nights", "album_cover/heart_beats_faster.png", 15]
   ];  
 
-  // // Temporary functions for buttons
-  // async function boosted(){
-  //   playlist[Math.floor(Math.random() * 6)][3] += 1;
-  // };
-
   async function reset(){
     for(let i=0; i < playlist.length; i++){
       playlist[i][3] = 0;
@@ -110,7 +105,7 @@
     <!-- Playlist -->
     <div class="boost-playlist">
       <div class = "boost-listening">
-        <Boosting {playlist} /> 
+        <Boosting {playlist} {cooldowns} /> 
       </div>
 
       <div class="playlist">
