@@ -3,40 +3,49 @@
 	import PlayedRecently from './PlayedRecently.svelte';
 	export let cooldowns, playlist;
   
-  let pos = {};
+  	$: pos = {};
+	let currPlaylist = playlist.concat([]);
+	let updateCooldown = 1000;
   
 	// button click handler 
 	let visible = {};
-	for (let elem of playlist) {
+	for (let elem of currPlaylist) {
 		visible[elem[0]] = false;
 	}; 
 
 	//boosts a song
 	async function boosted(song){
-    for (let elem of playlist) {
-      if (elem[0] == song) {
-        elem[3] += 1;
-		    //set to unclicked
-		    visible[elem[0]] = false;
-      }
-    } 
-  };
+		for (let elem of playlist) {
+		if (elem[0] == song) {
+			elem[3] += 1;
+			//set to unclicked
+			visible[elem[0]] = false;
+		}
+		} 
+	};
 
+	function getPositions(){  
+		for (let i = 0; i < playlist.length; i++){  
+			pos[playlist[i][0]] = i + 1;
+		}  
+	}  
+
+	$: getPositions();
+	$: setInterval(getPositions, updateCooldown);
 </script>
 
 <main>
 	<img class = "pop-up" src = "Boosts.png" alt = "pop-up screen" />
 
 	<div class="icon-buttons">
-		{#each playlist as entry}
+		{#each currPlaylist as entry}
 			{#if visible[entry[0]] === true}
     
 				<!-- To Boost Icon -->
 				<div class ="boost-icon">
 					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
 					<img class="song-cover" src={entry[2]} alt="song-record-cover">
-          <!-- <div class="song-title">Queue: {pos[0]}</div> -->
-					<div class="song-title">Queue: </div>
+					<div class="song-queue">Queue: {pos[entry[0]]}</div>
 				</div>
 
 
@@ -135,9 +144,18 @@
 		width: 90%;
     }
 
+	.song-queue{
+        font-size: 5px;
+        color: #D9D9D9;
+        font-family: "Inter", sans-serif;
+        transform: translate( 0px, -35px);
+		margin: auto;
+		width: 90%;
+    }
+
+
 	.icon:hover{
 		background-color: rgba(255, 255, 255, 0.176);
-		opacity: 0.7;
 		border-radius: 6px;
 	}
 
