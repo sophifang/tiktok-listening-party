@@ -162,12 +162,12 @@
         color: rgba(48,27,48,1);
         position: absolute;
         bottom: 200px;
+        padding: 6px;
         cursor: pointer;
     }
 
     .click-lyrics:hover {
         width: 220px;
-        padding: 6px;
         border-radius: 20px;
         background-color: rgba(45,25,54,0.2);
         box-sizing: border-box;
@@ -277,14 +277,14 @@
 
     .back-button {
         position: absolute;
-        top: 45px;
+        top: 35px;
         left: 270px;
         cursor: pointer;
     }
 
     .album-cover-lyrics {
         position: absolute;
-        top: 60px;
+        top: 55px;
         left: 30px;
         width: 50px;
     }
@@ -295,7 +295,7 @@
         font-size: 12px;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 60px;
+        top: 53px;
         left: 90px;
     }
 
@@ -305,7 +305,7 @@
         font-size: 12px;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 60px;
+        top: 53px;
         left: 167px;
     }
 
@@ -315,7 +315,7 @@
         font-size: 12px;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 75px;
+        top: 68px;
         left: 90px;
     }
 
@@ -325,8 +325,8 @@
         font-size: 13px;
         color: rgba(48,27,48,1);
         position: absolute;
-        top: 110px;
-        height: 440px;
+        top: 100px;
+        height: 455px;
         overflow-y: auto;
         scrollbar-width: none;
     }
