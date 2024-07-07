@@ -3,7 +3,6 @@
 	import PlayedRecently from './PlayedRecently.svelte';
 	export let cooldowns, playlist;
 
-
 	let pos = {};
 
 	// button click handler 
