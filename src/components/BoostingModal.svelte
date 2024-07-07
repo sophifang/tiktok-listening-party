@@ -1,17 +1,9 @@
 <script>
 	import UpNext from './UpNext.svelte';
 	import PlayedRecently from './PlayedRecently.svelte';
-    import { treemapSlice } from 'd3';
 	export let cooldowns;
     export let playlist;
 
-	/////////  Song Numbering  ////////////
-	// let counter = 0;
-	// let increment = () =>{
-	// 	counter++
-	// 	console.log(counter)
-	// 	return counter;
-	// }
 
 	let allSongs = playlist.concat(cooldowns);
 
@@ -37,78 +29,97 @@
 	<img class = "pop-up" src = "Boosts.png" alt = "pop-up screen" />
 
 	<div class="icon-buttons">
-		{#each allSongs as song}
-			{#if visible[song[0]] === true}
+		{#each allSongs as entry}
+			{#if visible[entry[0]] === true}
+				<!-- To Boost Icon -->
+				<div class ="icon">
+					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
+					<img class="song-cover" src={entry[2]} alt="song-record-cover">
+				</div>
 
-
-				<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(song[0])}>
-				<!-- <img class="song-cover" src={song[2]} alt="song-record-cover"> -->
-				<!-- <div class="song-title">{song[0]}</div> -->
 
 				{:else}
-					<!-- <div>
-						<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[song[0]] = true)}/>
-					 <img class="song-cover" src={song[2]} alt="song-record-cover">
-					</div> -->
-				 	<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[song[0]] = true)}/>
-					 <img class="song-cover" src={song[2]} alt="song-record-cover">
-					 <!-- <div class="song-title">{song[0]}</div> -->
-			{/if}
-			
+					<!-- Default Song Icon -->
+					<div class ="icon">
+						<input type="image" src="song-icon.png" class= "song-icon" alt="song-icon" on:click={() => (visible[entry[0]] = true)}/>
+					 	<img class="song-cover" src={entry[2]} alt="song-record-cover">
+						<div class="song-title">{entry[0]}</div>
+					</div>
+			{/if}	
 		{/each}
+
+		<div class ="icon">
+			<input type="image" src="song-icon.png" id="current" alt="song-icon" />
+			<img class="song-cover" id="current-overlaid" src="album_cover/street_symphony.png" alt="song-record-cover">
+			<div class="song-title" id="current-overlaid">Street Symphony</div>
+			
+		</div>
+
 	</div>
 
 	
 </main>
 
 <style>
-	
-	.pop-up{
-		width: 313.5px;
+
+	.icon{
+        display: inline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    
+    .pop-up{
+        width: 313.5px;
         transform: translate(-98%, 84.5%);
-		border-radius: 25px;
+        border-radius: 25px;
+    }
+    .icon-buttons{
+        max-width: 300px;
+        height: 250px;
+        transform: translate( -100%, -3%);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    
+    input{
+        max-width: 46px;
+    }
+
+    .song-cover{
+        max-width: 18px;
+        border-radius: 100%;
+        transform: translate( -180%, 20%);
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
 	}
 
-
-	.icon-buttons{
-		text-align: center;
-		max-width: 300px;
-		height: 250px;
-        transform: translate( -100%, -6%);
-	}
 	
-	input{
-		max-width: 46px;
-	}
-
-	.song-icon{
-		/* padding-left: 4%;
-		padding-right: 4%;
-		padding-top: 1.3%; */
-	}
-
-	.to-boost{
-		/* padding-left: 4%;
-		padding-right: 4%;
-		padding-top: 1.3%; */
-	}
-
-	.song-cover{
-		max-width:18px;
-		border-radius: 100%;
-		transform: translate( -275%, -190%);
-		cursor: pointer;
-	}
-
-	/* .song-title{
-		font-size: 5px;
+    .song-title{
+        font-size: 6px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
-		max-width: 50px;
-		transform: translate( 200%, -500%);
-	} */
+        max-width: 45px;
+        text-align: center;
+        transform: translate( 11px, -35px);
+    }
 
+	.song-icon:hover{
+		background-color: rgba(255, 255, 255, 0.176);
+		border-radius: 6px;
+	}
 
+	#current{
+		filter: blur(0.8px);
+		background-color: rgba(255, 255, 255, 0.176);
+		border-radius: 6px;
+	}
+
+	#current-overlaid{
+		filter: blur(0.4px);
+	}
 
 
 	
