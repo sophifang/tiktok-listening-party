@@ -189,7 +189,6 @@
         border-radius: 15px;
         background-color: rgba(22,22,34,0.2);
         box-sizing: border-box;
-        color: white;
     }
 
     .comment-box::placeholder {
@@ -278,15 +277,15 @@
 
     .back-button {
         position: absolute;
-        top: 35px;
-        left: 270px;
+        top: 48px;
+        left: 5px;
         cursor: pointer;
     }
 
     .album-cover-lyrics {
         position: absolute;
-        top: 55px;
-        left: 30px;
+        top: 50px;
+        left: 33px;
         width: 50px;
     }
 
@@ -296,8 +295,8 @@
         font-size: 12px;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 53px;
-        left: 90px;
+        top: 48px;
+        left: 92px;
     }
 
     .song-name {
@@ -306,8 +305,8 @@
         font-size: 12px;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 53px;
-        left: 167px;
+        top: 48px;
+        left: 169px;
     }
 
     .album-name {
@@ -316,8 +315,8 @@
         font-size: 12px;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 68px;
-        left: 90px;
+        top: 65px;
+        left: 92px;
     }
 
     .song-lyrics {
@@ -326,7 +325,7 @@
         font-size: 13px;
         color: rgba(48,27,48,1);
         position: absolute;
-        top: 100px;
+        top: 97px;
         height: 455px;
         overflow-y: auto;
         scrollbar-width: none;

@@ -69,11 +69,11 @@
     <div class="authors">
       By Cristina De La Torre, Sophia Fang, Carmen Truong, and Kathleen Nguyen
       <div class="date">
-        Jul 1, 2024
+        Jul 7, 2024
       </div>
     </div>
     
-    <img class="promo" src="temp-img.png" alt="Promo"/>
+    <img class="promo" src="music_discovery.png" alt="Promo"/>
 
     <p class="article">
       Last year, so and so artist something. And this is a big issue, many other artists are labeled one hit wonders. 
