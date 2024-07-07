@@ -17,8 +17,8 @@
     for (let elem of playlist) {
       if (elem[0] == song) {
         elem[3] += 1;
-				//set to unclicked
-				visible[elem[0]] = false;
+		//set to unclicked
+		visible[elem[0]] = false;
       }
     } 
   };
@@ -34,7 +34,7 @@
 				<div class ="boost-icon">
 					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
 					<img class="song-cover" src={entry[2]} alt="song-record-cover">
-          <!-- <div class="song-title">Queue: {pos[0]}</div> -->
+          			<!-- <div class="song-title">Queue: {pos[0]}</div> -->
 					<div class="song-title">Queue: </div>
 				</div>
 
