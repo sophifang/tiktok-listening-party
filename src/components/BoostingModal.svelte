@@ -2,14 +2,13 @@
 	import UpNext from './UpNext.svelte';
 	import PlayedRecently from './PlayedRecently.svelte';
 	export let cooldowns, playlist;
-
-	let pos = {};
-
+  
+  let pos = {};
+  
 	// button click handler 
 	let visible = {};
-	let clicked = {};
 	for (let elem of playlist) {
-		visible[elem[0]], clicked[elem[0]] = false;
+		visible[elem[0]] = false;
 	}; 
 
 	//boosts a song
@@ -17,26 +16,29 @@
     for (let elem of playlist) {
       if (elem[0] == song) {
         elem[3] += 1;
-		//set to unclicked
-		visible[elem[0]] = false;
+		    //set to unclicked
+		    visible[elem[0]] = false;
       }
     } 
   };
+
 </script>
 
 <main>
 	<img class = "pop-up" src = "Boosts.png" alt = "pop-up screen" />
 
 	<div class="icon-buttons">
-		{#each allSongs as entry}
+		{#each playlist as entry}
 			{#if visible[entry[0]] === true}
+    
 				<!-- To Boost Icon -->
 				<div class ="boost-icon">
 					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
 					<img class="song-cover" src={entry[2]} alt="song-record-cover">
-          			<!-- <div class="song-title">Queue: {pos[0]}</div> -->
+          <!-- <div class="song-title">Queue: {pos[0]}</div> -->
 					<div class="song-title">Queue: </div>
 				</div>
+
 
 				{:else}
 					<!-- Default Song Icon -->
@@ -61,18 +63,15 @@
 			<input type="image" src="current-song-icon.png" id="timed-out" alt="song-icon" />
 			<div class="song-title">Street Symphony</div>
 		</div>
-
-	</div>
-  
+	
 </main>
 
 <style>
-  
 	.cooldown-icon{
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+		display: inline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
 		width: 70%;
 		height: 70%;
 		margin: auto;
@@ -80,19 +79,19 @@
 
 	.boost-icon{
 		display: inline;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
 		width: 70%;
 		height: 70%;
 		margin: auto;
 	}
 
 	.icon{
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+        display: inline;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
 		width: 70%;
 		height: 70%;
 		margin: auto;

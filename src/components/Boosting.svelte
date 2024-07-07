@@ -1,14 +1,17 @@
 <script>
     import Modal from './BoostingModal.svelte';
-    export let playlist, cooldowns;
+    export let playlist;
+    export let cooldowns;
     
 </script>
   
+
 <div class = "phone-container">
     <img class = "listening-screen" src = "test.png" alt="phone screen"/>
     <Modal {playlist} {cooldowns}></Modal>
 </div>
 
+  
 <style>
     .phone-container{
         display: flex;
