@@ -254,7 +254,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   .button-wrapper{
