@@ -159,7 +159,7 @@
         font-family: 'Inter', sans-serif;
         font-weight: bold;
         font-size: 13px;
-        color: rgba(35,27,38,1);
+        color: rgba(48,27,48,1);
         position: absolute;
         bottom: 200px;
         cursor: pointer;
@@ -323,7 +323,7 @@
         font-family: 'Inter', sans-serif;
         font-weight: bold;
         font-size: 13px;
-        color: rgba(35,27,38,1);
+        color: rgba(48,27,48,1);
         position: absolute;
         top: 110px;
         height: 440px;
@@ -333,7 +333,6 @@
 
     .song-length {
         position: absolute;
-        bottom: 20px;
-        width: 250px;
+        bottom: 15px;
     }
 </style>

@@ -1,6 +1,6 @@
 <script>
-	let elapsed = 53;
-	let duration = 262;
+	let elapsed = 76;
+	let duration = 189;
 
     function format(time) {
 		let minutes = Math.floor(time / 60);
@@ -23,8 +23,8 @@
 <style>
     .slider {
         margin-top: 3px;
-		flex: 1;
-        width: 215px;
+        flex: 1;
+		width: 215px;
 		height: 0.3em;
 		background: var(--bg-2);
 		border-radius: 0.5em;
@@ -40,15 +40,16 @@
 	}
 
     .times{
-        font-size: 7px;
+        font-size: 10px;
         color: #F6F3F7;
         font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
         font-variation-settings: "slnt" 0;
 
-        display: grid;
-		grid-template-columns: 1fr 1fr;
+        display: flex; /* Ensure .times is a flex container */
+        justify-content: space-between; /* Ensure numbers are spaced evenly */
+        align-items: center; /* Align numbers vertically */
+        margin-top: 1px;
     }
 </style>
