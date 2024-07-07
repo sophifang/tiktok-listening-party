@@ -1,28 +1,28 @@
 <script>
 	import UpNext from './UpNext.svelte';
 	import PlayedRecently from './PlayedRecently.svelte';
-	export let cooldowns;
-    export let playlist;
+	export let cooldowns, playlist;
 
 
-	let allSongs = playlist.concat(cooldowns);
+	let pos = {};
 
 	// button click handler 
 	let visible = {};
-	for (let elem of allSongs) {
-		visible[elem[0]] = false;
+	let clicked = {};
+	for (let elem of playlist) {
+		visible[elem[0]], clicked[elem[0]] = false;
 	}; 
 
 	//boosts a song
 	async function boosted(song){
-		for (let elem of allSongs) {
-			if (elem[0] == song) {
-				elem[3] += 1;
+    for (let elem of playlist) {
+      if (elem[0] == song) {
+        elem[3] += 1;
+				//set to unclicked
 				visible[elem[0]] = false;
-			}
-		} 
-  	};
-	
+      }
+    } 
+  };
 </script>
 
 <main>
@@ -35,8 +35,9 @@
 				<div class ="boost-icon">
 					<input class="to-boost" type="image" src="Boost-clicked.png" alt="Boost Button" on:click={() => boosted(entry[0])}>
 					<img class="song-cover" src={entry[2]} alt="song-record-cover">
+          <!-- <div class="song-title">Queue: {pos[0]}</div> -->
+					<div class="song-title">Queue: </div>
 				</div>
-
 
 				{:else}
 					<!-- Default Song Icon -->
@@ -47,23 +48,32 @@
 					</div>
 			{/if}	
 		{/each}
+    
+    <!-- Cooldown Song Icon -->
+		{#each cooldowns as entry}
+			<div class ="cooldown-icon">
+				<input type="image" src="cooldown-{entry[0]}.png" id="timed-out" alt="song-icon" />
+				<div class="song-title">{entry[0]}</div>
+			</div>
+		{/each}
+
+		<!-- Current Song Icon -->
 		<div class ="cooldown-icon">
-			<input type="image" src="song-icon.png" id="current" alt="song-icon" />
-			<img class="song-cover" id="current-overlaid" src="album_cover/street_symphony.png" alt="song-record-cover">
-			<div class="song-title" id="current-overlaid">Street Symphony</div>
+			<input type="image" src="current-song-icon.png" id="timed-out" alt="song-icon" />
+			<div class="song-title">Street Symphony</div>
 		</div>
 
 	</div>
-
-	
+  
 </main>
 
 <style>
+  
 	.cooldown-icon{
-		display: inline;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 		width: 70%;
 		height: 70%;
 		margin: auto;
@@ -71,19 +81,19 @@
 
 	.boost-icon{
 		display: inline;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 		width: 70%;
 		height: 70%;
 		margin: auto;
 	}
 
 	.icon{
-        display: inline;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 		width: 70%;
 		height: 70%;
 		margin: auto;
@@ -133,16 +143,9 @@
 		border-radius: 6px;
 	}
 
-	#current{
-		filter: blur(0.8px);
-		background-color: rgba(255, 255, 255, 0.176);
+	#timed-out{
+		background-color: #454542;
 		border-radius: 6px;
 	}
-
-	#current-overlaid{
-		filter: blur(0.4px);
-	}
-
-
 	
 </style>
