@@ -2,8 +2,6 @@
     import Modal from './BoostingModal.svelte';
     export let playlist;
     export let cooldowns;
-
-    let showModal = false;
     
 </script>
   
@@ -23,9 +21,7 @@
     }
 
     .listening-screen{
-        /* height: 532.46px; */
         height: 608px;
-        /* width: 301px; */
         border-radius: 12px;
         margin: 0px;
 		padding: 0px;

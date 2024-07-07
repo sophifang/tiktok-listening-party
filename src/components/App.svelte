@@ -4,16 +4,16 @@
   import Boosting from './Boosting.svelte';
 
 
-  let song = ["Endless Sun", "Eternal Summer Skies", "album_cover/endless_sun.png", 0]
+  let song = ["Street Symphony", "Urban Rhythms", "album_cover/street_symphony.png", 0]
   let playlist = [
     ["The Place We Used To Go", "Whimsical Memories", "album_cover/the_place_we_used_to_go.png", 0],
     ["Rise Again", "Phoenix Heart", "album_cover/rise_again.png", 0], 
     ["Dancing Through the Tears", "Melancholy Moves", "album_cover/dancing_through_the_tears.png", 0],
     ["Moonlight Whispers", "Starlit Secrets", "album_cover/moonlight_whispers.png", 0], 
-    ["Heart in Your Hands", "City Lights Romance", "album_cover/heart_in_your_hands.png", 0],
+    ["Endless Sun", "Eternal Summer Skies", "album_cover/endless_sun.png", 0],
     ["Votes for Her", "Voices of Change", "album_cover/votes_for_her.png", 0],
-    ["Street Symphony", "Urban Rhythms", "album_cover/street_symphony.png", 0],
     ["Last Dance", "Final Twirl", "album_cover/last_dance.png", 0],
+    ["Heart in Your Hands", "City Lights Romance", "album_cover/heart_in_your_hands.png", 0],
     ["Too Many Hours", "Coal Mine Blues", "album_cover/too_many_hours.png", 0]
   ];  
   
@@ -126,7 +126,9 @@
     </p>
 
     <!-- Listening Party -->
-    <ListeningParty />
+    <div class="listeningparty">
+      <ListeningParty />
+    </div>
 
     <p class="article" style="margin-bottom: 10vh">
       Sed ac est risus. Nam congue massa at diam finibus semper. Ut ac diam ac mauris vulputate blandit. 
@@ -260,5 +262,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .listeningparty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin top as needed */
   }
 </style>
