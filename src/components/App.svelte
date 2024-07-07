@@ -268,6 +268,7 @@
     background-color: #EC1254;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 15px;
