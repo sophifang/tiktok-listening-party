@@ -10,6 +10,6 @@ From the user’s perspective, there are many ways to get involved in a Listenin
 We recognize fans may want to participate in choosing songs to play so we implemented a collaborative playlist with a design intentionally similar to the Gift system in Tiktok’s LIVE feature. In our website demo, users are presented with an overlay showcasing clickable icons. Each icon, also known as a Boost, includes a single song available in the playlist along with a price in both Coins and Tokens. When the Boosts are tapped and purchased, users will be able to push the respective song forward in the playlist. 
 
 To find out more on this feature, watch our video
-<a href= "https://youtu.be/wPk9ywbxERc"> here, or  view the full demonstration in 
-<a href= "https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=939-2353&t=SbS7Hj6td1DFXM6l-1&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=939%3A2353&show-proto-sidebar=1" > Figma.
+<a href= "https://youtu.be/wPk9ywbxERc"> here</a>, or  view the full demonstration in 
+<a href= "https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=939-2353&t=SbS7Hj6td1DFXM6l-1&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=939%3A2353&show-proto-sidebar=1" > Figma</a>.
 
