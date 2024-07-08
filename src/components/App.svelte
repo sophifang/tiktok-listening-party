@@ -378,7 +378,7 @@
 
   .article{
     margin-top: 10px;
-    /* margin-bottom: 10px; */
+    line-height: 30px;
   }
 
   .heading{
