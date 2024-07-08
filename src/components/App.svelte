@@ -75,31 +75,167 @@
     
     <img class="promo" src="music_discovery.png" alt="Promo"/>
 
-    <p class="article">
-      Last year, so and so artist something. And this is a big issue, many other artists are labeled one hit wonders. 
-      Steve Lacy trying to get their fans to sing the non-viral second verse.Lorem ipsum dolor sit amet, consectetur 
-      adipiscing elit. Nam sed ligula ac dui tempus luctus. Proin eu quam volutpat, blandit ligula sed, aliquam libero. 
-      In dictum ante justo, a euismod elit ultrices at. Donec ac ante at nunc accumsan hendrerit. Etiam malesuada suscipit 
-      vehicula. Nulla vel urna ut ligula ultrices rhoncus. Integer augue massa, porta at nisl at, egestas aliquet risus.
-        Duis luctus ligula dolor, vitae pretium nisi mollis eu.
+    <div class="heading">
+      I. Problem Statement
+    </div>
+
+    <p class="article" >
+      When we look at TikTok’s current state of music discovery, there is a general concern that artists who go viral on TikTok 
+      will be unable to obtain a consistent audience, ultimately becoming known as one-hit wonders. While increasing exposure 
+      and going viral on TikTok is important, artists also have to ensure that their impact is meaningful to sustain their newfound
+       success. So, how do we achieve this? Our team, The Jams, propose implementing a new listening party feature that builds on 
+       top of TikTok’s current LIVE infrastructure. This new feature will bridge the gap between fans and artists by providing a 
+       space to explore discography, new and old, in a fresh engaging way. Fans may chat with one another and earn cool rewards 
+       which together work to build a stronger sense of community all while streaming. Artists may also make surprise appearances
+        to interact with their audience and strengthen their artist-fan communities.
     </p>
 
-    <p class="article">
-      Mauris eget tempus felis. Nam blandit est mi, eget suscipit tellus porttitor eget. Vestibulum rhoncus orci sapien, 
-      rutrum efficitur justo mattis vitae. Quisque tellus enim, malesuada sit amet tellus vitae, dignissim egestas leo. Vivamus
-      pellentesque metus dolor, quis blandit erat venenatis vel. Orci varius natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Nullam sit amet tortor ligula. Etiam a condimentum lorem, a tempus quam. Fusce auctor vestibulum
-        purus id gravida. Maecenas consequat tortor imperdiet cursus gravida. Praesent finibus libero ut ipsum molestie, ac molestie nisl tempus.
-          Nullam posuere condimentum enim quis faucibus. Nulla egestas fringilla nisl, ut scelerisque dui euismod et.
 
+    <div class="heading">
+      II. Development Tools
+    </div>
+
+    <p class="article" >
+      We prioritized developing the UI design and user flow of our concept so 
+      audiences can better understand our vision. We built our full demonstration in Figma, and assets used can be found in section 
+      VI. Source below. Suno AI was also used to generate fake songs including titles, lyrics, and covers. In addition to our Figma 
+      designs, we built a website on GitHub Pages showcasing our idea using Svelte, a front-end software framework. The website is 
+      mainly written in JavaScript, HTML, and CSS.
     </p>
 
-    <p class="article">
-      Nulla facilisi. Pellentesque bibendum lorem eget pellentesque aliquet. Ut non fermentum nulla. 
-      Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam luctus
-        odio eu sagittis scelerisque. Nunc facilisis nisi eros, in fermentum metus lobortis quis. Praesent ac
-        ullamcorper lectus, nec feugiat diam. Suspendisse potenti.
 
+    <div class="heading">
+      III. Joining a Listening Party
+    </div>
+
+    <p class="article">
+      Users are given four unique options to navigate to a Listening Party, allowing the feature to be readily accessible.
+    </p>
+
+    <div class="subheading">
+      A. TikTok LIVE
+    </div>
+
+    <p class="article">
+      The first option is through the LIVE feature where users will be shown Listening Party streams among other TikTok LIVEs. 
+      When the “Explore” icon is clicked, a “Music” tab will be included with only Listening Parties listed. This will help present 
+      the new Listening Party feature to both current and new TikTok users, especially those already familiar with TikTok LIVE.
+    </p>
+
+    <div class="subheading">
+      B. For You Page
+    </div>
+
+    <p class="article">
+      The second option is through the For You Page where a Listening Party may suddenly appear after the user swipes(in the same 
+      way TikTok LIVEs appear). This will also help make the new Listening Party feature known to both current and new TikTok users.
+    </p>
+
+    <div class="subheading">
+      C. Music Feed
+    </div>
+
+    <p class="article">
+      The third option is through a new Music feed found by clicking on “Music” at the head of the Home page. At the top of the Music 
+      feed is the user’s artist following list. A purple ring around the artist’s icon indicates whether or not the artist is currently 
+      hosting a Listening Party. This list is presented to encourage users to listen to more songs in an artist’s discography which will 
+      strengthen the user’s connection with the artist. Furthermore, users may swipe down on the page to see previews of personalized 
+      recommended Listening Parties, similar to the For You Page’s setup. Tapping on the preview will lead the user to the Listening 
+      Party. Users may opt to filter their recommendations using tags below the user’s artist following list. The Music feed was 
+      conceptualized to make the Listening Party feature more identifiable and accessible.
+    </p>
+
+
+    <div class="subheading">
+      D. Artist Profile
+    </div>
+
+    <p class="article">
+      Lastly, the fourth option is on the artist’s profile page. Like TikTok’s LIVE feature, the artist’s icon will be highlighted to 
+      indicate that a Listening Party is being hosted. To differentiate between a LIVE and a Listening Party, a purple ring will appear 
+      rather than the traditional red ring. This option will help fans identify when their favorite artists are hosting a Listening Party 
+      or prompt new fans to check out the music of an artist they just discovered.
+    </p>
+
+    <div class="heading">
+      IV. Listening Party
+    </div>
+
+    <p class="article">
+      In a busy industry where artists want to grow their community and promote new music, artists are encouraged to reach a wider audience 
+      and they can do so by utilizing a new feature within TikTok, a Listening Party. A Listening Party is a type of livestream where artists
+       and their audience can gather to listen to and talk about the artist’s music together. 
+    </p>
+
+    <div class="subheading">
+      A. Hosting a Listening Party(Artist POV)
+    </div>
+
+    <p class="article">
+      Let’s start off the Listening Party from an artist’s perspective. Artists will have access to start Listening Parties as soon as 
+      TikTok approves of their artist profile. To accommodate an artist’s schedule, artists are given the option to plan Listening Parties 
+      whether or not they are able to be present. This allows artists to interact with fans and the artists themselves can experience what 
+      their audience thinks of their music. When the artist is present, they can decide whether or not to have their video on. Music will 
+      always be playing, so the artist can mute themselves whenever necessary or they can pause the music for a moment if the artist wants 
+      to talk about the song. If an artist is not able to be present during their Listening Party, they can start the LIVE and then return 
+      later to end the party. In the artist’s place of where their video would be, the current song will be displayed instead with three 
+      lines of lyrics at a time. Even though the artist is not present, the feature is still beneficial to the artist as it will help 
+      build their community where listeners can meet each other and bond over the artist’s music. Artists are given a default playlist 
+      that TikTok will provide by taking a sample of the artist’s entire discography despite whether or not the songs have been uploaded to 
+      their TikTok music. Artists can edit the default playlist that TikTok suggested or the artist can decide on a playlist themselves and 
+      their community will be able to collaborate by boosting songs they want to be added to the queue. More details about the collaborative 
+      playlist and boosting features will be discussed in the following sections. Specific features for Listening Parties from the artist’s 
+      perspective include buttons such as +Host and Control. The +Host button gives artists the opportunity to invite artists they may or may 
+      not know to co-host the Listening Party with them and listeners will be able to listen to music from all participating artists. From the 
+      artist perspective, utilizing +Host encourages artists to grow their communities with other artists who may have the same goal. From the 
+      user perspective, if artists utilize +Host then users will be introduced to new artists and new genres of music. The Control button allows 
+      artists to take over the playlist queue if they want to make changes during their Listening Party.
+    </p>
+
+    <div class="subheading">
+      B. The Main Screen
+    </div>
+
+    <p class="article">
+      From the user’s perspective, there are many ways to get involved in a Listening Party. By default, users are presented with a main screen 
+      containing the current song’s title, cover, and a few lines of the lyrics. Clicking on the lyrics will open a separate screen with the complete
+       lyrics. At the top of the main screen, users will see an option to follow the artist, the song’s category ranking if applicable, the two top 
+       listeners, the number of concurrent listeners, and the Explore button. At the bottom of the main screen, users can take advantage of the live 
+       chat to send messages to the artist as well as chat with other listeners. The bottom also includes an assortment of buttons that will provide 
+       users with more options(more information in the following sections).
+    </p>
+
+    <!-- Listening Party -->
+    <div class="listeningparty">
+      <ListeningParty />
+    </div>
+
+    <div class="subheading">
+      C. Learning More about Songs
+    </div>
+
+    <p class="article">
+      Since we want users to leave the Listening Party knowing new songs, we give them the option to learn more about the current song being played. 
+      By tapping the Song button, users will have the ability to bookmark the current song(which is added to their bookmarked sounds on TikTok), add 
+      the song to their connected music platform, learn which album the song is from, and observe the lyrics to the song in full. The Song button makes 
+      it more convenient for users to learn and save the song, thus, creating a more lasting impact.
+    </p>
+
+
+    <div class="subheading">
+      D. Collaborative Playlist
+    </div>
+
+    <p class="article">
+      We recognize fans may want to participate in choosing songs to play so we implemented a collaborative playlist with a design intentionally similar 
+      to the Gift system in Tiktok’s LIVE feature. New users who are already familiar with the Gift system will have little difficulty understanding the 
+      new one. When the “Request” icon at the bottom of the page is tapped, users will be presented with an overlay showcasing clickable icons. Each icon, 
+      also known as a Boost, includes a single song available in the playlist along with a price in both Coins and Tokens(more on this feature later). Coins 
+      can be purchased by clicking the Recharge button, which is identical to the LIVE feature. When the Boosts are tapped and purchased, users will be able 
+      to push the respective song forward in the playlist. To see the current playlist with live updates, users may tap on the top right icon of the overlay. 
+      Since we still want to induce a diverse range of songs to be played, songs will be set on 15 minute cooldowns after being played. This collaborative 
+      playlist promotes a stronger sense of community as well as gives an additional reason for users to stay and wait for their favorite songs to play. 
+      A demo of the collaborative playlist is available below.
     </p>
 
     <!-- Playlist -->
@@ -116,26 +252,97 @@
       <button on:click={reset} class="reset-button">Reset</button>
     </div>
 
-    <p class="article">
-      Sed ac est risus. Nam congue massa at diam finibus semper. Ut ac diam ac mauris vulputate blandit. 
-      Cras pellentesque nunc quam, quis maximus lacus fermentum quis. Vivamus eget iaculis odio, in blandit 
-      ipsum. Proin gravida purus sed dolor vehicula fringilla. Nunc maximus tempus velit, id consequat turpis
-        ullamcorper et. Nunc posuere libero nec ligula placerat aliquam. Donec imperdiet risus in ante euismod
-        ultrices. Proin vestibulum lectus iaculis, congue enim eu, dapibus tortor.
-    </p>
-
-    <!-- Listening Party -->
-    <div class="listeningparty">
-      <ListeningParty />
+    <div class="heading">
+      V. Reward System
     </div>
 
-    <p class="article" style="margin-bottom: 10vh">
-      Sed ac est risus. Nam congue massa at diam finibus semper. Ut ac diam ac mauris vulputate blandit. 
-      Cras pellentesque nunc quam, quis maximus lacus fermentum quis. Vivamus eget iaculis odio, in blandit 
-      ipsum. Proin gravida purus sed dolor vehicula fringilla. Nunc maximus tempus velit, id consequat turpis
-        ullamcorper et. Nunc posuere libero nec ligula placerat aliquam. Donec imperdiet risus in ante euismod
-        ultrices. Proin vestibulum lectus iaculis, congue enim eu, dapibus tortor.
-    </p>  
+    <div style="margin-top: 20px;" class="subheading">
+      A. Tokens
+    </div>
+
+    <p class="article">
+      To encourage users to listen to more songs, we introduce a new currency called the Token that can be earned during the Listening Party, rather 
+      than purchased. Users will earn 20 Tokens for each completed song they listen to. Tokens can be used to purchase Boosts much like Coins, however, 
+      the purchase rate will be 100x greater than Coins. For example, if a song can be boosted by 1 Coin, then it can also be boosted by 100 Tokens, in 
+      which case the user will need to listen to 5 complete songs to gather enough Tokens. This system grants all users, whether or not they have the 
+      means to purchase Coins, the ability to participate in the collaborative playlist. Users will be motivated to listen to more songs to earn Tokens, 
+      thereby increasing content exposure and diversity. 
+    </p>
+
+    <div class="subheading">
+      B. Listener Level
+    </div>
+
+    <p class="article">
+      A level-up mechanic is added to reward loyal fans and recognize their participation in Listening Parties. Users will earn experience points 
+      that increase their Listener level, similar to the Gift system established in TikTok’s LIVE feature. Users will be given badges based on 
+      their Listener level that will appear by their name in the artist’s Listening Party comment section. Some badges may include a notification 
+      announcing the fan’s achievement. This will incentivize fans to listen to songs under an artist’s discography that they may not have heard 
+      otherwise, increasing content diversity and building a stronger fan-artist connection.
+    </p>
+
+    <div class="heading">
+      VI. Additional Features
+    </div>
+
+    <div style="margin-top: 20px;" class="subheading">
+      A. Rising Artist Spotlight
+    </div>
+
+    <p class="article">
+      The Music feed includes a banner titled “Rising Artist Spotlight” for users to check out new artists. This banner will showcase a single 
+      rising artist each week. Tapping this banner will open a popup with more information on the artist. It was important for us to include this 
+      banner to not only propel discovery for users, but to also support up and coming artists.
+    </p>
+
+    <div class="subheading">
+      B. Artist Community Goals
+    </div>
+
+    <p class="article">
+      Artists may opt to display a community goal on their profile page for a limited time. This feature can be used to encourage album streams, 
+      sales, presales, and pre-saves. Moreover, clicking on the community goal will provide more information about the artist and their goal. The 
+      community goal gives fans a clear call-to-action with pressure to be completed under a deadline. As a result, fans will be more likely to 
+      interact and achieve goals set by the artist. 
+    </p>
+
+    <div class="heading">
+      VII. Sources
+    </div>
+
+    <div class="subheading">
+      A. Research
+    </div>
+
+    <a href="https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/">https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/</a>
+    <a href="https://luminatedata.com/wp-content/uploads/2022/08/Luminate_Entertainment_365_Final.pdf">https://luminatedata.com/wp-content/uploads/2022/08/Luminate_Entertainment_365_Final.pdf</a>
+    <a href="https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment ">https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment</a>
+
+    <div class="subheading">
+      B. Assets
+    </div>
+  
+    Photo by cottonbro studio: 
+    <br/>
+    <a href="https://www.pexels.com/photo/a-woman-holding-a-microphone-while-singing-5648355/">https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/</a>
+    <br/>
+    Photo by Erik Mclean:
+    <br/> 
+    <a href="https://www.pexels.com/photo/woman-holding-pink-flowers-on-the-tree-8517921/">https://www.pexels.com/photo/woman-holding-pink-flowers-on-the-tree-8517921/</a>
+    <br/>
+    Photo by Clara Ngo from Pexels:
+    <br/> 
+    <a href="https://www.pexels.com/photo/back-view-of-a-woman-in-brown-dress-3866555/">https://www.pexels.com/photo/back-view-of-a-woman-in-brown-dress-3866555/</a>
+    <br/>
+    Photo by Godisable Jacob: 
+    <br/>
+    <a href="https://www.pexels.com/photo/photo-of-woman-wearing-yellow-floral-top-871495/">https://www.pexels.com/photo/photo-of-woman-wearing-yellow-floral-top-871495/</a>
+    <br/>
+    Photo by Rajaa Lemnari:
+    <br/>
+    <a href="https://www.pexels.com/photo/couple-together-on-desert-19968907/">https://www.pexels.com/photo/couple-together-on-desert-19968907/</a>
+    <br/>
+    AI-Generated Images by Suno AI
 
     <div id="footer">
       Try out our full demo in 
@@ -151,6 +358,7 @@
   #footer {
     text-align: center;
     font-weight: 500;
+    margin-top: 10vh;
     margin-bottom: 10vh;
   }
 
@@ -166,8 +374,25 @@
 
   h1{
     font-size: 40px;
-    margin-bottom: 10px;
   }
+
+  .article{
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+  }
+
+  .heading{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-weight: 600;
+  }
+
+  .subheading{
+    margin-top: 25px;
+    font-weight: 500;
+  }
+
 
   .authors{
     font-size: 15px;
@@ -247,6 +472,8 @@
       grid-template-areas:
         'top-left-container top-right-container'
         'bottom-left-container bottom-right-container';
+      margin-top: 40px;
+
     }
   }
   
@@ -279,6 +506,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Adjust margin top as needed */
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 </style>
