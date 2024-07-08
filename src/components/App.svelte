@@ -49,7 +49,7 @@
           </a>
         </li>
         <li>
-          <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=444-2386&t=dZ8PawirI0kKnMej-0&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=444%3A2386&show-proto-sidebar=1" target="_blank">
+          <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=939-2353&t=JFR1hpJbFzYzJUaT-1&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=939%3A2353&show-proto-sidebar=1" target="_blank">
             <img 
               src="Figma-logo.png" 
               alt="Figma" 
@@ -75,7 +75,7 @@
     
     <img class="promo" src="music_discovery.png" alt="Promo"/>
 
-    <div class="heading">
+    <div class="heading" id="problem-statement">
       I. Problem Statement
     </div>
 
@@ -91,7 +91,7 @@
     </p>
 
 
-    <div class="heading">
+    <div class="heading" id="development-tools">
       II. Development Tools
     </div>
 
@@ -99,7 +99,7 @@
       We prioritized developing the UI design and user flow of our concept so 
       audiences can better understand our vision. We built our full demonstration in Figma, and assets used can be found in section 
       VI. Source below. Suno AI was also used to generate fake songs including titles, lyrics, and covers. In addition to our Figma 
-      designs, we built a website on GitHub Pages showcasing our idea using Svelte, a front-end software framework. The website is 
+      designs, we built our website showcasing our idea using Svelte, a front-end software framework. The website is 
       mainly written in JavaScript, HTML, and CSS.
     </p>
 
