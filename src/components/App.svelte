@@ -63,7 +63,7 @@
   <!-- Article -->
   <div class="page">
     <h1>
-      Introducing TikTok’s newest listening party feature building artist/fan communities and enhancing music discovery
+      Introducing TikTok’s newest listening party feature building artist-fan communities and enhancing music discovery
     </h1>
 
     <div class="authors">
@@ -75,11 +75,7 @@
     
     <img class="promo" src="music_discovery.png" alt="Promo"/>
 
-    <div class="heading" id="problem-statement">
-      I. Problem Statement
-    </div>
-
-    <p class="article" >
+    <p class="article" style="margin-top: 40px">
       When we look at TikTok’s current state of music discovery, there is a general concern that artists who go viral on TikTok 
       will be unable to obtain a consistent audience, ultimately becoming known as one-hit wonders. While increasing exposure 
       and going viral on TikTok is important, artists also have to ensure that their impact is meaningful to sustain their newfound
@@ -90,22 +86,8 @@
         to interact with their audience and strengthen their artist-fan communities.
     </p>
 
-
-    <div class="heading" id="development-tools">
-      II. Development Tools
-    </div>
-
-    <p class="article" >
-      We prioritized developing the UI design and user flow of our concept so 
-      audiences can better understand our vision. We built our full demonstration in Figma, and assets used can be found in section 
-      VI. Source below. Suno AI was also used to generate fake songs including titles, lyrics, and covers. In addition to our Figma 
-      designs, we built our website showcasing our idea using Svelte, a front-end software framework. The website is 
-      mainly written in JavaScript, HTML, and CSS.
-    </p>
-
-
     <div class="heading">
-      III. Joining a Listening Party
+      I. Joining a Listening Party
     </div>
 
     <p class="article">
@@ -158,7 +140,7 @@
     </p>
 
     <div class="heading">
-      IV. Listening Party
+      II. Listening Party
     </div>
 
     <p class="article">
@@ -199,10 +181,10 @@
     <p class="article">
       From the user’s perspective, there are many ways to get involved in a Listening Party. By default, users are presented with a main screen 
       containing the current song’s title, cover, and a few lines of the lyrics. Clicking on the lyrics will open a separate screen with the complete
-       lyrics. At the top of the main screen, users will see an option to follow the artist, the song’s category ranking if applicable, the two top 
-       listeners, the number of concurrent listeners, and the Explore button. At the bottom of the main screen, users can take advantage of the live 
-       chat to send messages to the artist as well as chat with other listeners. The bottom also includes an assortment of buttons that will provide 
-       users with more options(more information in the following sections).
+       lyrics(try it out in the demo below!). At the top of the main screen, users will see an option to follow the artist, the song’s category ranking 
+       if applicable, the two top listeners, the number of concurrent listeners, and the Explore button. At the bottom of the main screen, users can 
+       take advantage of the live chat to send messages to the artist as well as chat with other listeners. The bottom also includes an assortment 
+       of buttons that will provide users with more options(more information in the following sections).
     </p>
 
     <!-- Listening Party -->
@@ -228,7 +210,7 @@
 
     <p class="article">
       We recognize fans may want to participate in choosing songs to play so we implemented a collaborative playlist with a design intentionally similar 
-      to the Gift system in Tiktok’s LIVE feature. New users who are already familiar with the Gift system will have little difficulty understanding the 
+      to the Gift system in Tiktok’s LIVE feature. Users who are already familiar with the Gift system will have little difficulty understanding the 
       new one. When the “Request” icon at the bottom of the page is tapped, users will be presented with an overlay showcasing clickable icons. Each icon, 
       also known as a Boost, includes a single song available in the playlist along with a price in both Coins and Tokens(more on this feature later). Coins 
       can be purchased by clicking the Recharge button, which is identical to the LIVE feature. When the Boosts are tapped and purchased, users will be able 
@@ -253,7 +235,7 @@
     </div>
 
     <div class="heading">
-      V. Reward System
+      III. Reward System
     </div>
 
     <div style="margin-top: 20px;" class="subheading">
@@ -274,15 +256,15 @@
     </div>
 
     <p class="article">
-      A level-up mechanic is added to reward loyal fans and recognize their participation in Listening Parties. Users will earn experience points 
-      that increase their Listener level, similar to the Gift system established in TikTok’s LIVE feature. Users will be given badges based on 
-      their Listener level that will appear by their name in the artist’s Listening Party comment section. Some badges may include a notification 
-      announcing the fan’s achievement. This will incentivize fans to listen to songs under an artist’s discography that they may not have heard 
-      otherwise, increasing content diversity and building a stronger fan-artist connection.
+      A level-up mechanic is added to reward loyal fans and recognize their participation in Listening Parties. To access the rewards page, users can click 
+      on their profile on the Boosts page. Users will earn experience points that increase their Listener level, similar to the Gift system established in 
+      TikTok’s LIVE feature. Users will be given badges based on their Listener level that will appear by their name in the artist’s Listening Party 
+      comment section. Some badges may include a notification announcing the fan’s achievement. This will incentivize fans to listen to songs under 
+      an artist’s discography that they may not have heard otherwise, increasing content diversity and building a stronger fan-artist connection.
     </p>
 
     <div class="heading">
-      VI. Additional Features
+      IV. Additional Features
     </div>
 
     <div style="margin-top: 20px;" class="subheading">
@@ -306,17 +288,29 @@
       interact and achieve goals set by the artist. 
     </p>
 
+    <div class="heading" id="development-tools">
+      V. Development Tools
+    </div>
+
+    <p class="article" >
+      With the time constraint of the 2024 TikTok TechJam in mind, we prioritized developing the UI design and user flow of our concept so 
+      audiences can better understand our vision. We built our full demonstration in Figma, and assets used can be found in section 
+      "VI. Sources" below. Suno AI was used to generate fake songs including titles, lyrics, and covers. In addition to our Figma 
+      designs, we built our website showcasing our idea using Svelte, a front-end software framework. The website is 
+      mainly written in JavaScript, HTML, and CSS.
+    </p>
+
     <div class="heading">
-      VII. Sources
+      VI. Sources
     </div>
 
     <div class="subheading">
       A. Research
     </div>
 
-    <a href="https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/">https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/</a>
-    <a href="https://luminatedata.com/wp-content/uploads/2022/08/Luminate_Entertainment_365_Final.pdf">https://luminatedata.com/wp-content/uploads/2022/08/Luminate_Entertainment_365_Final.pdf</a>
-    <a href="https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment ">https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment</a>
+    <a href="https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/" target="_blank">https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/</a>
+    <a href="https://luminatedata.com/wp-content/uploads/2022/08/Luminate_Entertainment_365_Final.pdf" target="_blank">https://luminatedata.com/wp-content/uploads/2022/08/Luminate_Entertainment_365_Final.pdf</a>
+    <a href="https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment" target="_blank">https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment</a>
 
     <div class="subheading">
       B. Assets
@@ -324,23 +318,23 @@
   
     Photo by cottonbro studio: 
     <br/>
-    <a href="https://www.pexels.com/photo/a-woman-holding-a-microphone-while-singing-5648355/">https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/</a>
+    <a href="https://www.pexels.com/photo/a-woman-holding-a-microphone-while-singing-5648355/" target="_blank">https://www.pewresearch.org/internet/2024/02/22/how-u-s-adults-use-tiktok/</a>
     <br/>
     Photo by Erik Mclean:
     <br/> 
-    <a href="https://www.pexels.com/photo/woman-holding-pink-flowers-on-the-tree-8517921/">https://www.pexels.com/photo/woman-holding-pink-flowers-on-the-tree-8517921/</a>
+    <a href="https://www.pexels.com/photo/woman-holding-pink-flowers-on-the-tree-8517921/" target="_blank">https://www.pexels.com/photo/woman-holding-pink-flowers-on-the-tree-8517921/</a>
     <br/>
     Photo by Clara Ngo from Pexels:
     <br/> 
-    <a href="https://www.pexels.com/photo/back-view-of-a-woman-in-brown-dress-3866555/">https://www.pexels.com/photo/back-view-of-a-woman-in-brown-dress-3866555/</a>
+    <a href="https://www.pexels.com/photo/back-view-of-a-woman-in-brown-dress-3866555/" target="_blank">https://www.pexels.com/photo/back-view-of-a-woman-in-brown-dress-3866555/</a>
     <br/>
     Photo by Godisable Jacob: 
     <br/>
-    <a href="https://www.pexels.com/photo/photo-of-woman-wearing-yellow-floral-top-871495/">https://www.pexels.com/photo/photo-of-woman-wearing-yellow-floral-top-871495/</a>
+    <a href="https://www.pexels.com/photo/photo-of-woman-wearing-yellow-floral-top-871495/" target="_blank">https://www.pexels.com/photo/photo-of-woman-wearing-yellow-floral-top-871495/</a>
     <br/>
     Photo by Rajaa Lemnari:
     <br/>
-    <a href="https://www.pexels.com/photo/couple-together-on-desert-19968907/">https://www.pexels.com/photo/couple-together-on-desert-19968907/</a>
+    <a href="https://www.pexels.com/photo/couple-together-on-desert-19968907/" target="_blank">https://www.pexels.com/photo/couple-together-on-desert-19968907/</a>
     <br/>
     AI-Generated Images by Suno AI
 
@@ -374,6 +368,7 @@
 
   h1{
     font-size: 40px;
+    margin-bottom: 10px;
   }
 
   .article{
