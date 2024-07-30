@@ -465,7 +465,7 @@
 
     margin-right: auto;
     margin-left: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     padding-left: 16px;
     padding-right: 16px;
 
