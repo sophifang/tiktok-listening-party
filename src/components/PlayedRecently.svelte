@@ -74,7 +74,7 @@
     }
 
     span[slot="album"]{
-        font-size: 7px;
+        font-size: 8px;
         color: #BFBFBF;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
