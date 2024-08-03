@@ -63,14 +63,14 @@
 		{#each cooldowns as entry}
 			<div class ="cooldown-icon">
 				<input type="image" src="cooldown-{entry[0]}.png" id="timed-out" alt="song-icon" />
-				<div class="song-title">{entry[0]}</div>
+				<div class="song-title" style="opacity: 0.7;">{entry[0]}</div>
 			</div>
 		{/each}
 
 		<!-- Current Song Icon -->
 		<div class ="cooldown-icon">
 			<input type="image" src="current-song-icon.png" id="timed-out" alt="song-icon" />
-			<div class="song-title">Street Symphony</div>
+			<div class="song-title" style="opacity: 0.7;">Street Symphony</div>
 		</div>
 	
 </main>
@@ -162,6 +162,7 @@
 	#timed-out{
 		background-color: #454542;
 		border-radius: 6px;
+		opacity: 0.7;
 	}
 	
 </style>
