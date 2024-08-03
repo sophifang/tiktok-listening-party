@@ -29,7 +29,7 @@
 		padding-right: 11px;
         border-radius: 7px;
 		margin-bottom: 8px;
-        background: rgba(81,60,89,1);
+        background: rgba(106,70,118,1);
 	}
 
     .centerCover {
