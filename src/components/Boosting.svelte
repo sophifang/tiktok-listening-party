@@ -7,7 +7,7 @@
   
 
 <div class = "phone-container">
-    <img class = "listening-screen" src = "behind_boost.png" alt="phone screen"/>
+    <img class = "listening-screen" src = "behind-boost.png" alt="phone screen"/>
     <Modal {playlist} {cooldowns}></Modal>
 </div>
 
