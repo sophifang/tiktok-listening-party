@@ -25,14 +25,14 @@
                     <span> Voices of the block, <br> </span>
                 </div>
                 <input bind:value={comment} class="comment-box" placeholder="Comment">
-                <img src="tiktok_emoji.png" alt="Comment emoji" class="emoji">
-                <img src="recharge_icon.png" alt="Recharge icon" class="recharge-icon">
+                <img src="tiktok-emoji.png" alt="Comment emoji" class="emoji">
+                <img src="recharge-icon.png" alt="Recharge icon" class="recharge-icon">
                 <p class="recharge-text">Recharge</p>
-                <img src="request_icon.png" alt="Request icon" class="request-icon">
+                <img src="request-icon.png" alt="Request icon" class="request-icon">
                 <p class="request-text">Request</p>
-                <img src="album_icon.png" alt="Album icon" class="album-icon">
+                <img src="album-icon.png" alt="Album icon" class="album-icon">
                 <p class="song-text">Song</p>
-                <img src="share_icon.png" alt="Share icon" class="share-icon">
+                <img src="share-icon.png" alt="Share icon" class="share-icon">
                 <p class="share-text">Share</p>
             </div>
         </div>
@@ -41,7 +41,7 @@
     {#if page === 1}
         <div class="second">
             <div class="content">
-                <img class="lyrics-background" src="lyrics_background.png" alt="Phone"/>
+                <img class="lyrics-background" src="lyrics-background.png" alt="Phone"/>
                 <img src="album_cover/street_symphony.png" alt="Album cover" class="album-cover-lyrics">
                 <div class="back-button" on:click={back}>
                     <img src="left_arrow.png" width="12"/>
@@ -227,8 +227,8 @@
     .request-icon {
         position: absolute;
         bottom: 23px;
-        left: 205px;
-        width: 20px;
+        left: 206px;
+        width: 18px;
     }
 
     .request-text {
@@ -244,8 +244,8 @@
     .album-icon {
         position: absolute;
         bottom: 23px;
-        left: 239px;
-        width: 20px;
+        left: 239.5px;
+        width: 18px;
     }
 
     .song-text {
@@ -260,9 +260,9 @@
 
     .share-icon {
         position: absolute;
-        bottom: 25px;
+        bottom: 24px;
         left: 272px;
-        width: 17px;
+        width: 16px;
     }
 
     .share-text {
