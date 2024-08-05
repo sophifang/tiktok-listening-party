@@ -93,7 +93,7 @@
         background-color: white;
         position: fixed;
         top: 0;
-        bottom: 0;
+        bottom: -100px;
         right: -100%;
         z-index: 3;
         transition: right 0.3s ease-in-out;
