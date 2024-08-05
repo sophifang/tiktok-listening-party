@@ -63,7 +63,7 @@
 		{#each cooldowns as entry}
 			<div class ="cooldown-icon">
 				<input type="image" src="cooldown-{entry[0]}.png" id="timed-out" alt="song-icon" />
-				<div class="song-title" style="opacity: 0.7;">{entry[0]}</div>
+				<div class="song-title" style="opacity: 0.7; width: 80%;">{entry[0]}</div>
 			</div>
 		{/each}
 
@@ -136,7 +136,7 @@
 
 	
     .song-title{
-        font-size: 5px;
+        font-size: 5.5px;
         color: #D9D9D9;
         font-family: "Inter", sans-serif;
         transform: translate( 0px, -32px);

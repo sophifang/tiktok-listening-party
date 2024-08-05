@@ -1,8 +1,9 @@
 <script>
+  import NavBar from './NavBar.svelte';
   import Playlist from './Playlist.svelte';
   import ListeningParty from './ListeningParty.svelte';
   import Boosting from './Boosting.svelte';
-
+  import TableOfContent from './TableOfContent.svelte';
 
   let song = ["Street Symphony", "Urban Rhythms", "album_cover/street_symphony.png", 0]
   let playlist = [
@@ -23,43 +24,23 @@
     ["Heart Beats Faster", "Electric Nights", "album_cover/heart_beats_faster.png", 15]
   ];  
 
+  let menuSelected = false;
+
   async function reset(){
     for(let i=0; i < playlist.length; i++){
       playlist[i][3] = 0;
     }
   };
+  
 </script>
 
 <main>
   <!-- Navigation Bar -->
-  <nav>
-    <div class="container">
-      <ul>
-        <h1 class="menu-heading">
-          TheJams
-        </h1>
-        <li style="padding: 1vw;">
-          <a href="https://github.com/sophifang/tiktok-listening-party" target="_blank">
-            <img 
-              src="github-mark.png" 
-              alt="GitHub Repo" 
-              title="GitHub Repo" 
-              width="35px"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=939-2353&t=JFR1hpJbFzYzJUaT-1&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=939%3A2353&show-proto-sidebar=1" target="_blank">
-            <img 
-              src="Figma-logo.png" 
-              alt="Figma" 
-              title="Figma Demo"
-              width="32px"/>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <NavBar bind:menuSelected/>
+
+  <!-- Table of Content -->
+  <TableOfContent bind:menuSelected/>
+
   <!-- Article -->
   <div class="page">
     <h1>
@@ -76,17 +57,30 @@
     <img class="promo" src="music_discovery.png" alt="Promo"/>
 
     <p class="article" style="margin-top: 40px">
-      When we look at TikTok’s current state of music discovery, there is a general concern that artists who go viral 
+      When we look at TikTok’s current state of music discovery, there is a general concern artists who go viral 
       will be unable to maintain a consistent audience, ultimately becoming known as one-hit wonders. While increasing exposure 
-      and going viral on TikTok is important, artists also have to ensure that their impact is meaningful to sustain their newfound
+      and going viral on TikTok is important, artists also have to ensure their impact is meaningful to sustain their newfound
        success. So, how do we achieve this? Our team, The Jams, propose implementing a new listening party feature that builds on 
        top of TikTok’s current LIVE infrastructure—TikTok LIVE Music. This new feature will bridge the gap between fans and artists by providing a 
        space to explore discography, new and old, in a fresh engaging way. Fans may chat with one another and earn cool rewards, 
-       which together work to build a stronger sense of community all while streaming. Artists may also make surprise appearances
+       which together work to build a stronger sense of community, all while streaming. Artists may also make surprise appearances
         to interact with their audience and strengthen their artist-fan communities.
     </p>
 
-    <div class="heading">
+    <div id="tip-container">
+      <div id="tip">
+        Select 
+        <svg width=22 height=16 style="transform: translateY(2px); margin-left:2px; margin-right:2px;">
+          <line id="top" style="stroke-width:2px" x1=0 y1=2  x2=22 y2=2/>
+          <line id="middle" style="stroke-width:2px" x1=0 y1=8 x2=22 y2=8/>
+          <line id="bottom" style="stroke-width:2px" x1=0 y1=14 x2=22 y2=14/>
+        </svg> 
+        to see the Table of Contents.
+      </div>  
+    </div>
+
+    <span id="joining-a-listening-party" class="jump-marker" style="scroll-margin-top: 60px"></span>
+    <div class="heading" style="margin-top: 16px">
       I. Joining a Listening Party
     </div>
 
@@ -94,6 +88,7 @@
       Users are given four unique options to navigate to a Listening Party hosted by an artist, allowing the feature to be readily accessible.
     </p>
 
+    <span id="tiktok-live" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       A. TikTok LIVE
     </div>
@@ -104,6 +99,7 @@
        LIVE Music to both current and new TikTok users, especially those already familiar with LIVE.
     </p>
 
+    <span id="for-you-page" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       B. For You Page
     </div>
@@ -113,6 +109,7 @@
       way LIVEs appear). This will also help make the new Listening Party feature known to both current and new TikTok users.
     </p>
 
+    <span id="music-feed" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       C. Music Feed
     </div>
@@ -127,7 +124,7 @@
       conceptualized to make the Listening Party feature more identifiable and accessible.
     </p>
 
-
+    <span id="artist-profile" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       D. Artist Profile
     </div>
@@ -139,6 +136,7 @@
       or prompt new listeners to check out the music of an artist they just discovered.
     </p>
 
+    <span id="listening-party" class="jump-marker" style="scroll-margin-top: 60px"></span>
     <div class="heading">
       II. Listening Party
     </div>
@@ -149,8 +147,9 @@
        and their audience can gather to listen to and talk about the artist’s music together. 
     </p>
 
+    <span id="hosting-a-listening-party" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
-      A. Hosting a Listening Party(Artist POV)
+      A. Hosting a Listening Party
     </div>
 
     <p class="article">
@@ -174,8 +173,9 @@
       artists to take over the playlist queue if they want to make changes during their Listening Party.
     </p>
 
+    <span id="main-screen" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
-      B. The Main Screen
+      B. Main Screen
     </div>
 
     <p class="article">
@@ -189,11 +189,12 @@
 
     <!-- Listening Party -->
     <div class="listeningparty">
-      <ListeningParty />
+      <ListeningParty/>
     </div>
 
+    <span id="song-information" class="jump-marker" style="scroll-margin-top: 87px"></span>
     <div class="subheading">
-      C. Learning More About Songs
+      C. Song Information
     </div>
 
     <p class="article">
@@ -203,7 +204,7 @@
       it more convenient for listeners to learn and save the song, thus, creating a more lasting impact.
     </p>
 
-
+    <span id="collaborative-playlist" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       D. Collaborative Playlist
     </div>
@@ -234,16 +235,18 @@
       <button on:click={reset} class="reset-button">Reset</button>
     </div>
 
+    <span id="reward-system" class="jump-marker" style="scroll-margin-top: 40px"></span>
     <div class="heading">
       III. Reward System
     </div>
 
+    <span id="tokens" class="jump-marker" style="scroll-margin-top: 65px"></span>
     <div style="margin-top: 20px;" class="subheading">
       A. Tokens
     </div>
 
     <p class="article">
-      To encourage listeners to stay and listen to more songs, we introduce a new currency called the Token that can be earned during the Listening Party, rather 
+      To encourage listeners to stay and listen to more songs, we introduce a new in-app currency called Tokens that can be earned during the Listening Party, rather 
       than purchased. Listeners will earn 20 Tokens for each completed song they listen to. Tokens can be used to purchase Boosts much like Coins, however, 
       the exchange rate will be 100x greater than Coins. For example, if a song can be boosted by 1 Coin, then it can also be boosted by 100 Tokens, in 
       which case the listener will need to listen to 5 complete songs to gather enough Tokens. This system grants all listeners, whether or not they have the 
@@ -251,6 +254,7 @@
       thereby increasing content exposure and diversity. 
     </p>
 
+    <span id="listener-level" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       B. Listener Level
     </div>
@@ -263,10 +267,12 @@
       an artist’s discography that they may not have heard otherwise, increasing content diversity and building a stronger fan-artist connection.
     </p>
 
+    <span id="additional-features" class="jump-marker" style="scroll-margin-top: 60px"></span>
     <div class="heading">
       IV. Additional Features
     </div>
 
+    <span id="rising-artist-spotlight" class="jump-marker" style="scroll-margin-top: 65px"></span>
     <div style="margin-top: 20px;" class="subheading">
       A. Rising Artist Spotlight
     </div>
@@ -277,6 +283,7 @@
       banner to not only propel discovery for listeners, but to also support up-and-coming artists.
     </p>
 
+    <span id="artist-community-goals" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       B. Artist Community Goals
     </div>
@@ -288,6 +295,7 @@
       interact and achieve goals set by the artist. 
     </p>
 
+    <span id="development-tools" class="jump-marker" style="scroll-margin-top: 60px"></span>
     <div class="heading" id="development-tools">
       V. Development Tools
     </div>
@@ -296,14 +304,16 @@
       With the time constraint of the 2024 TikTok TechJam in mind, we prioritized developing the UI design and user flow of our concept so 
       audiences can better understand our vision. We built our full demonstration in Figma, and assets used can be found in section 
       "VI. Sources" below. Suno AI was used to generate fake songs including titles, lyrics, and covers. In addition to our Figma 
-      designs, we built our website showcasing our idea using Svelte, a front-end software framework. The website is 
+      designs, we built our website detailing our new feature using the front-end software framework Svelte. The website is 
       mainly written in JavaScript, HTML, and CSS.
     </p>
 
+    <span id="sources" class="jump-marker" style="scroll-margin-top: 60px"></span>
     <div class="heading">
       VI. Sources
     </div>
 
+    <span id="research" class="jump-marker" style="scroll-margin-top: 65px"></span>
     <div class="subheading">
       A. Research
     </div>
@@ -316,6 +326,7 @@
       <a href="https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment" target="_blank">https://www.midiaresearch.com/blog/music-discovery-in-2023-is-about-the-journey-not-the-moment</a>
     </p>
 
+    <span id="assets" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       B. Assets
     </div>
@@ -345,10 +356,30 @@
     </p>
 
     <div id="footer">
-      Try out our full demo in 
-      <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=939-2353&t=JFR1hpJbFzYzJUaT-1&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=939%3A2353&show-proto-sidebar=1" target="_blank">Figma</a> 
-      or check out this article's code in our 
-      <a href="https://github.com/sophifang/tiktok-listening-party" target="_blank">GitHub repo</a>!
+      Select  
+      <a href="https://www.figma.com/proto/WhRSRwaN7Rr8fHFvNbTqGn/Designs?node-id=939-2353&t=JFR1hpJbFzYzJUaT-1&scaling=scale-down&content-scaling=fixed&page-id=327%3A1404&starting-point-node-id=939%3A2353&show-proto-sidebar=1" target="_blank">
+        <img 
+          src="Figma-logo.png" 
+          alt="Figma" 
+          title="Figma Demo"
+          width="20px"
+          style="transform: translateY(3px);padding-left:3px;padding-right:3px;"
+          />
+      </a>
+      to try out our full demo.
+      <br>
+      <br>
+      Select 
+      <a href="https://github.com/sophifang/tiktok-listening-party" target="_blank">
+        <img 
+          src="github-mark.png" 
+          alt="GitHub Repo" 
+          title="GitHub Repo" 
+          width="20px"
+          style="transform: translateY(3px);padding-left:3px;padding-right:3px;"
+        />
+      </a>
+      to check out this article's code.
     </div>  
   </div>
 </main>
@@ -361,11 +392,6 @@
     margin-bottom: 10vh;
   }
 
-  .container{
-    position: relative;
-    width: 100%;
-  }
-
   .promo{
     margin-top: 40px;
     width: 100%;
@@ -374,6 +400,7 @@
   h1{
     font-size: 40px;
     margin-bottom: 10px;
+    margin-top: 15px;
   }
 
   .article{
@@ -387,9 +414,8 @@
     word-break: break-all;
   }
 
-
   .heading{
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 40px;
     margin-bottom: 0px;
     font-weight: 600;
@@ -399,7 +425,6 @@
     margin-top: 25px;
     font-weight: 500;
   }
-
 
   .authors{
     font-size: 15px;
@@ -412,38 +437,17 @@
     font-size: 15px;
     color: #7D7D7D
   }
-
-  nav {
-    display: flex;
-		border-bottom: 0.1px solid rgba(0, 0, 0, 0.3);
-    position: fixed;
-    background-color: #FFFFFF;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-
-  ul {
-    display: flex;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 2.5vw;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  li{
-    margin: auto;
-    padding-right: 2.5vw;
-  }
-
-  .menu-heading{
-    font-size: 40px;
-    margin: 0px;
-    width: 85vw;
-  }
+    
+  svg {
+    color: #7D7D7D;
+		transition: transform 0.3s ease-in-out;
+	}
+	
+	svg line {
+		stroke: currentColor;
+		stroke-width: 3;
+		transition: transform 0.3s ease-in-out
+	}
 
   .page{
     max-width: 800px;
@@ -452,7 +456,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    font-size: 17px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -482,7 +486,6 @@
         'top-left-container top-right-container'
         'bottom-left-container bottom-right-container';
       margin-top: 40px;
-
     }
   }
   
@@ -511,11 +514,27 @@
     padding-right: 15px;
   }
 
+  .reset-button:hover{
+    background-color: #dc104e;
+  }
+
   .listeningparty {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+
+  #tip-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 300;
+    color: #7D7D7D;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 </style>
