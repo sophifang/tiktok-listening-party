@@ -193,7 +193,8 @@
     <div class="listeningparty">
       <ListeningParty/>
     </div>
-
+    <br/>
+    <p/>
     <span id="song-information" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       C. Song Information
@@ -318,6 +319,7 @@
       VI. Sources
     </div>
 
+    <p/>
     <span id="research" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       A. Research
@@ -528,7 +530,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   #tip-container{
