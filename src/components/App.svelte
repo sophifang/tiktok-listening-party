@@ -79,7 +79,7 @@
       </div>  
     </div>
 
-    <span id="joining-a-listening-party" class="jump-marker" style="scroll-margin-top: 60px"></span>
+    <span id="joining-a-listening-party" class="jump-marker" style="scroll-margin-top: 70px"></span>
     <div class="heading" style="margin-top: 16px">
       I. Joining a Listening Party
     </div>
@@ -136,7 +136,7 @@
       or prompt new listeners to check out the music of an artist they just discovered.
     </p>
 
-    <span id="listening-party" class="jump-marker" style="scroll-margin-top: 60px"></span>
+    <span id="listening-party" class="jump-marker" style="scroll-margin-top: 70px"></span>
     <div class="heading">
       II. Listening Party
     </div>
@@ -192,7 +192,7 @@
       <ListeningParty/>
     </div>
 
-    <span id="song-information" class="jump-marker" style="scroll-margin-top: 87px"></span>
+    <span id="song-information" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       C. Song Information
     </div>
@@ -235,12 +235,14 @@
       <button on:click={reset} class="reset-button">Reset</button>
     </div>
 
-    <span id="reward-system" class="jump-marker" style="scroll-margin-top: 40px"></span>
+    <p/>
+    <span id="reward-system" class="jump-marker" style="scroll-margin-top: 70px"/>
     <div class="heading">
       III. Reward System
     </div>
 
-    <span id="tokens" class="jump-marker" style="scroll-margin-top: 65px"></span>
+    <p/>
+    <span id="tokens" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div style="margin-top: 20px;" class="subheading">
       A. Tokens
     </div>
@@ -267,12 +269,13 @@
       an artist’s discography that they may not have heard otherwise, increasing content diversity and building a stronger fan-artist connection.
     </p>
 
-    <span id="additional-features" class="jump-marker" style="scroll-margin-top: 60px"></span>
+    <span id="additional-features" class="jump-marker" style="scroll-margin-top: 70px"></span>
     <div class="heading">
       IV. Additional Features
     </div>
 
-    <span id="rising-artist-spotlight" class="jump-marker" style="scroll-margin-top: 65px"></span>
+    <p/>
+    <span id="rising-artist-spotlight" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div style="margin-top: 20px;" class="subheading">
       A. Rising Artist Spotlight
     </div>
@@ -295,7 +298,7 @@
       interact and achieve goals set by the artist. 
     </p>
 
-    <span id="development-tools" class="jump-marker" style="scroll-margin-top: 60px"></span>
+    <span id="development-tools" class="jump-marker" style="scroll-margin-top: 70px"></span>
     <div class="heading" id="development-tools">
       V. Development Tools
     </div>
@@ -308,12 +311,12 @@
       mainly written in JavaScript, HTML, and CSS.
     </p>
 
-    <span id="sources" class="jump-marker" style="scroll-margin-top: 60px"></span>
+    <span id="sources" class="jump-marker" style="scroll-margin-top: 70px"></span>
     <div class="heading">
       VI. Sources
     </div>
 
-    <span id="research" class="jump-marker" style="scroll-margin-top: 65px"></span>
+    <span id="research" class="jump-marker" style="scroll-margin-top: 80px"></span>
     <div class="subheading">
       A. Research
     </div>
