@@ -44,7 +44,8 @@
   <!-- Article -->
   <div class="page">
     <h1>
-      Introducing TikTok’s newest listening party feature building artist-fan communities and enhancing music discovery
+      Introducing TikTok LIVE Music enhancing artist-Fan communities & 
+      music discovery through in-app experiences
     </h1>
 
     <div class="authors">
