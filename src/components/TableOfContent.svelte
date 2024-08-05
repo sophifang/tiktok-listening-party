@@ -92,11 +92,12 @@
     aside{
         background-color: white;
         position: fixed;
-        bottom: 0px;
+        top: 0;
+        /* bottom: 0; */
         right: -100%;
         z-index: 3;
         transition: right 0.3s ease-in-out;
-        overflow-y: scroll;
+        overflow-y: auto;
         height: 100%;
         box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.25);
     }
