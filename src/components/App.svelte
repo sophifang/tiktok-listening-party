@@ -44,9 +44,8 @@
   <!-- Article -->
   <div class="page">
     <h1>
-      Introducing TikTok LIVE Music, 
-      <br/>Building Artist-Fan Communities & 
-      Enhancing Music Discovery
+      Introducing In-App Experience for Artist-Fan Communities & 
+       Music Discovery, <i>TikTok LIVE Music</i>
     </h1>
 
     <div class="authors">
@@ -56,7 +55,7 @@
       </div>
     </div>
     
-    <img class="promo" src="tiktok-live-music.png" alt="Promo"/>
+    <img class="promo" src="tiktok-live-music.png" alt="TikTok LIVE Music"/>
 
     <p class="article" style="margin-top: 40px">
       When we look at TikTok’s current state of music discovery, there is a general concern artists who go viral 
